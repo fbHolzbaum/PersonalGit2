@@ -3,12 +3,33 @@ body{
 	margin:0px;
 }
 
+img{
+	height:100%;
+	width:100%;
+}
+
 #header{
 	width:100%;
 	height:auto;
+	position:relative;
 }
 
 #header img{
 	width:100%;
 	height:auto;
+}
+
+#navigationbar{
+	width:80%;
+	height:140px;
+	background-color:white;
+	position:absolute;
+	top:50px;
+	left:10%;
+	right:10%;
+}
+
+#logo{
+	height:130px;
+	width:300px;
 }

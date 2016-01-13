@@ -1,7 +1,22 @@
 body{
 	border:0px;
 	margin:0px;
-	background-color:rgb(245, 250, 240);
+	background-color:rgb(255, 255, 255);
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+p, h1, h2, h3, a{
+	font-family:"Arial";
+	
+}
+
+p, a{
+	color:rgb(68,69,69);
+}
+
+a{
+	text-decoration: none;
 }
 
 img{
@@ -9,66 +24,43 @@ img{
 	width:100%;
 }
 
-#header{
-	top:-50px;
+#topcolor{
+	height:30px;
 	width:100%;
-	height:auto;
-	position:relative;
-	z-index:1;
-	display: table;
-}
-
-#header img{
-	width:100%;
-	height:auto;
-	position:relative
-}
-
-#headerinformation{
-	height:250px;
-	width:400px;
-	top: -200px;
-	float:right;
-	right:5%;
-	position:relative;
-	background-color:rgba(190, 242, 255, 0.85);
-	-webkit-box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
-	-moz-box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
-	box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
-	z-index:4;
+	background-color:rgb(30, 96, 97);
 }
 
 #navigationbar{
 	width:100%;
 	height:140px;
-	background-color:rgba(245, 245, 245, 0.5);
+	background-color:rgba(255, 255, 255, 0.5);
 	z-index:2;
 	position:relative;
+	display:table;
 }
 
-#navigationsection{
+
+.navigationsection{
+	margin-top:auto;
+	margin-bottom:auto;
 	width:10%;
-	height:70%;
+	height:140px;
 	float:right;
-	text-align:center;
 }
 
-#navigationsection img{
-	margin-top:15px;
-	height:50px;
-	width:50px;
-}
 
-#navigationsection p{
+.navigationsection a{
+	display:block;
+	font-size:30px;
 	text-align:center;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:5px;
+	margin-top:55px;
 }
 
 #logo{
 	height:130px;
-	width:205px;
+	width:512px;
 	margin-top:5px;
 	margin-bottom:5px;
 	margin-left:10px;
@@ -76,14 +68,59 @@ img{
 	float:left;
 }
 
+
+#header{
+	width:100%;
+	height:700px;
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	text-align:center;
+}
+
+
+#headerimage{
+	width:2400px;
+	height:700px;
+	position:absolute;
+	padding:0;
+	margin-left:-1200px;
+	left:50%;
+}
+
+#headerimage img{
+	width:auto;
+	height:700px;
+	position:relative;
+	display:block;
+	margin: auto auto;
+}
+
+#headerinformation{
+	height:250px;
+	width:600px;
+	top:-475px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	background-color:rgba(30, 96, 97, 0.98);
+	-webkit-box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
+	-moz-box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
+	box-shadow: 0px 1px 4px 2px rgba(78,134,148,1);
+	z-index:4;
+}
+
+
+
+
 #mainsection{
-	background-color:rgba(245, 245, 245, 0.5);
 	z-index:0;
-	top: -350px;
 	height:auto;
 	min-height:50px;
-	width:100%;
+	width:1200px;
 	position:relative;
+	margin:auto;
 }
 
 #news{
@@ -98,6 +135,6 @@ img{
 	float:right;
 	margin-right:5%;
 	position:relative;
-	top:120px;
 	width:30%;
+	top:50px;
 }

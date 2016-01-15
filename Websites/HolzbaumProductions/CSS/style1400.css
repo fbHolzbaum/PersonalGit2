@@ -1,0 +1,12 @@
+#headerimage{
+	width:1600px;
+	height:470px;
+	padding:0;
+	margin-left:-800px;
+	left:50%;
+}
+
+#headerimage img{
+	width:auto;
+	height:470px;
+}

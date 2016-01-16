@@ -34,6 +34,7 @@ h1, h2, h3{
 
 a{
 	text-decoration: none;
+	font-family:"Arial";
 }
 
 img{
@@ -90,6 +91,10 @@ img{
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:55px;
+}
+
+.navigationsection a:hover{
+	color:rgb(30, 96, 97);
 }
 
 #firstsection{
@@ -243,11 +248,32 @@ footer{
 	margin-left:50px;
 	width:150px;
 	height:150px;
-
+	margin-top:80px;
 }
 
+.footerlink a{
+	color:white;
+	font-size:15px;
+	display:block;
+}
 
 #firstfooterlink{
-	margin-left:200px!important;	
+	margin-left:275px!important;	
 }
 
+#socialmediacontainer{
+	height:72px;
+	width:116px;
+	margin-top:200px;
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
+}
+
+#socialmediacontainer img{
+	padding:0px;
+	border:0px;
+	height:50px;
+	width:50px;
+	margin-left:6px;
+}

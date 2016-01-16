@@ -7,11 +7,7 @@
 	height:400px;
 	width:480px;
 	top:-480px;
-	display:block;
 	margin-left:70px;
-	margin-right:auto;
-	position:relative;
-	z-index:4;
 }
 
 #headerinformation h1{

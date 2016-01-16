@@ -124,8 +124,17 @@
 	text-align:center;
 	background-color:rgba(220, 220, 220, 0.5);
 	padding-top:80px;
-	padding-bottom:60px;
-	margin-bottom:80px;
+	margin-bottom:0px;
+	padding-bottom:80px;
+
+
+}
+
+#twitterwindow div{
+	width:400px;
+	
+	margin-right:auto;
+	margin-left:auto;
 }
 
 
@@ -136,23 +145,7 @@ footer{
 	background-color:rgb(30, 96, 97);
 	margin-left:auto;
 	margin-right:auto;
+	display:none;
 }
 
 
-#footercontainer{
-	width:800px;
-	height:auto;
-	top:20px;
-}
-
-.footerlink{
-	float:left;
-	margin-left:50px;
-	width:120px;
-	height:150px;
-	margin-top:80px;
-}
-
-#firstfooterlink{
-	margin-left:75px!important;	
-}

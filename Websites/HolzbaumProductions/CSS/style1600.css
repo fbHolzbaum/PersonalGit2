@@ -1,29 +1,29 @@
 #header{
-	width:1400px;
-	height:516px;
+	width:1600px;
+	height:590px;
 }
 
 #headerinformation{
-	height:380px;
-	width:440px;
-	top:-440px;
+	height:400px;
+	width:480px;
+	top:-480px;
 	display:block;
-	margin-left:65px;
+	margin-left:70px;
 	margin-right:auto;
 	position:relative;
 	z-index:4;
 }
 
 #headerinformation h1{
-	font-size:65px;
+	font-size:70px;
 	margin-bottom:10px;
 }
 
 #headerinformation h2{
-	font-size:25px;
+	font-size:28px;
 }
 
 #headerinformation h3{
 	padding-bottom:40px;
-	font-size:22px;
+	font-size:24px;
 }

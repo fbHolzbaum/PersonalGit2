@@ -1,28 +1,5 @@
-#headerimage{
-	width:2000px;
-	height:590px;
-	padding:0;
-	margin-left:-1000px;
-	left:50%;
+#header{
+	width:1800px;
+	height:663px;
 }
 
-#headerimage img{
-	width:auto;
-	height:590px;
-}
-
-#headerinformation{
-	height:375px;
-	width:500px;
-	top:-500px;
-	display:block;
-	margin-left:350px;
-	margin-right:auto;
-	position:relative;
-	z-index:4;
-}
-
-
-#mainsection h1{
-	margin-top:100px;
-}

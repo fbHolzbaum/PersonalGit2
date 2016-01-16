@@ -1,0 +1,158 @@
+#logo{
+	height:80px;
+	width:315px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	z-index:2;
+	float:left;
+}
+
+#navigationbar{
+	height:90px;
+}
+
+#topcolor{
+	display:none;
+}
+
+.navigationsection{
+	width:120px;
+	height:90px;
+	display:none;
+}
+
+
+#firstsection{
+	margin-right:10px;
+}
+
+#header{
+	display:none;
+}
+
+#mobileheader{
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+#mobileheader img{
+	width:100%;
+	height:auto;
+	margin:0px;
+	padding:0px;
+}
+
+#mobileheader div{
+	background-color:rgb(68,69,69);
+	height:250px;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+#mobileheader div h1{
+	text-align:center;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	color:white;
+	text-shadow: 1px 1px rgba(240, 240, 240, 0.5);
+	font-size:25px;
+}
+
+#mobileheader div p{
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:18px;
+	color:white;
+	text-shadow: 1px 1px rgba(240, 240, 240, 0.5);
+}
+
+#mobileheader div a{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	padding:10px 100px;
+	border-radius:25px;
+}
+
+#mobileheader div a:hover{
+	padding:11px 105px;
+}
+
+
+
+
+#mainsection h1{
+	margin-top:60px;
+	font-size:45px;
+	text-align:center;
+	
+}
+
+#news{
+	margin-left:auto;
+	margin-right:auto;
+	top:0px;
+	width:80%;
+	clear:both;
+	float:none;
+}
+
+#newscontainer{
+	position:relative;
+	width:100%;
+	height:150px;
+	overflow:hidden;
+}
+
+
+#twitterwindow{
+	position:relative;
+	width:100%;
+	top:80px;
+	float:none;
+	clear:both;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+	background-color:rgba(220, 220, 220, 0.5);
+	padding-top:80px;
+	padding-bottom:60px;
+	margin-bottom:80px;
+}
+
+
+footer{
+	min-height:250px;
+	width:100%;
+	max-width:1900px;
+	background-color:rgb(30, 96, 97);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#footercontainer{
+	width:800px;
+	height:auto;
+	top:20px;
+}
+
+.footerlink{
+	float:left;
+	margin-left:50px;
+	width:120px;
+	height:150px;
+	margin-top:80px;
+}
+
+#firstfooterlink{
+	margin-left:75px!important;	
+}

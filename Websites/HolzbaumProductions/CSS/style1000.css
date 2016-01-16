@@ -1,0 +1,138 @@
+#logo{
+	height:80px;
+	width:315px;
+	margin-top:5px;
+	margin-bottom:5px;
+	margin-left:10px;
+	z-index:2;
+	float:left;
+}
+
+#navigationbar{
+	height:90px;
+}
+
+.navigationsection{
+	width:120px;
+	height:90px;
+}
+
+.navigationsection a{
+	font-size:26px;
+	margin-top:34px;
+}
+
+#firstsection{
+	margin-right:10px;
+}
+
+#header{
+	width:1000px;
+	height:368px;
+}
+
+#headerinformation{
+	height:250px;
+	width:320px;
+	top:-340px;
+	display:block;
+	margin-left:40px;
+}
+
+#headerinformation h1{
+	font-size:50px;
+	margin-bottom:6px;
+}
+
+#headerinformation h2{
+	font-size:20px;
+}
+
+#headerinformation h3{
+	padding-bottom:40px;
+	font-size:17px;
+}
+
+#headerinformation a{
+	padding:15px 80px;
+}
+
+#headerinformation a:hover{
+	padding:16px 85px;
+}
+
+#mainsection{
+	z-index:0;
+	height:auto;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#mainsection h1{
+	margin-top:60px;
+	font-size:50px;
+	text-align:center;
+	
+}
+
+#news{
+	margin-left:auto;
+	margin-right:auto;
+	top:0px;
+	width:600px;
+	clear:both;
+	float:none;
+}
+
+#newscontainer{
+	position:relative;
+	width:600px;
+	height:150px;
+	overflow:hidden;
+}
+
+
+#twitterwindow{
+	position:relative;
+	width:100%;
+	top:80px;
+	float:none;
+	clear:both;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+	background-color:rgba(220, 220, 220, 0.5);
+	padding-top:80px;
+	padding-bottom:60px;
+	margin-bottom:80px;
+}
+
+
+footer{
+	min-height:250px;
+	width:100%;
+	max-width:1900px;
+	background-color:rgb(30, 96, 97);
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#footercontainer{
+	width:800px;
+	height:auto;
+	top:20px;
+}
+
+.footerlink{
+	float:left;
+	margin-left:50px;
+	width:120px;
+	height:150px;
+	margin-top:80px;
+}
+
+#firstfooterlink{
+	margin-left:75px!important;	
+}

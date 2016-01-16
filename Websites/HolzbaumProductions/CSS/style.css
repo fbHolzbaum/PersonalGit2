@@ -56,7 +56,7 @@ img{
 }
 
 .buttonlink:hover{
-	padding:20px 105px;
+	padding:17px 105px;
 	border-radius:30px;
 }
 
@@ -118,6 +118,9 @@ img{
 	float:left;
 }
 
+#mobileheader{
+	display:none;
+}
 
 #header{
 	width:1900px;
@@ -288,3 +291,5 @@ footer{
 	width:50px;
 	margin-left:6px;
 }
+
+

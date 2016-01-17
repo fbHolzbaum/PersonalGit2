@@ -7,19 +7,59 @@
 		<link rel="stylesheet" href="css/style1200.css" media="screen and (max-width: 1200px)">
 		<link rel="stylesheet" href="css/style1000.css" media="screen and (max-width: 1000px)">
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)"> 
+		
+		<!-- Javascript Part -->
+		<script>
+		//<!--
+			var menuOpen = false;
+			function CallNavigation(){
+				//Change navigationbutton background
+				if(!menuOpen)
+				{
+					//Open Menu
+					document.getElementById("mobilenavigationOff").id = 'mobilenavigation';
+					document.getElementById("mobilenavigationbutton").style.background = "rgb(30, 96, 97)";
+					document.getElementById("body").className = "stop-scrolling";
+					menuOpen = true;
+				}else
+				{
+					//Close Menu
+					document.getElementById("mobilenavigation").id = 'mobilenavigationOff';
+					document.getElementById("mobilenavigationbutton").style.background = "white";
+					document.getElementById("body").className = "";
+					menuOpen = false;
+				}
+			}
+			
+			
+			function CallSubNavigation(name)
+			{
+				switch(name)
+				{
+					case "news": document.getElementById("lowernavigation1").className = "lowernavigation"; break;
+					case "games": document.getElementById("lowernavigation2").className = "lowernavigation"; break;
+					case "about": document.getElementById("lowernavigation3").className = "lowernavigation"; break;
+				}
+			}
+		//-->
+		</script>
+		
 	</head>
 	
 	<header>
 		<div id="topcolor"></div>
 	</header>
 	
-	<body>
+	<body id="body">
 		<div id="navigationbar">
 			<div id="logo">
 				<img src="images/main/hplogo.jpg">
 			</div>
+			<div id="logomobile">
+				<img src="images/main/hplogo_mobile.jpg">
+			</div>
 			<div class="navigationsection" id="firstsection">
-				<a href="">TEAM</a>
+				<a href="">ABOUT</a>
 			</div>
 			<div class="navigationsection">
 				<a href="">GAMES</a>
@@ -27,6 +67,36 @@
 			<div class="navigationsection">
 				<a href="">NEWS</a>
 			</div>
+			<!-- ONly for mobile -->
+			<div id="mobilenavigationbutton"  onclick="CallNavigation()">
+				<img src="images/main/menubutton.png">			
+			</div>
+		</div>
+		<!-- ONly for mobile -->
+		<div id="mobilenavigationOff">
+				<div style="margin-top:10px">
+					<a href="">HOME</a>
+				</div>
+				<div>
+					<a href="">NEWS</a><p onclick="CallSubNavigation('news')">&#x25BC;</p>
+					<div id="lowernavigation1" class="hidden">
+						<a href="">Website</a>
+						<a href="">Twitter</a>
+					</div>
+				</div>
+				<div>
+					<a href="">GAMES</a><p onclick="CallSubNavigation('games')">&#x25BC;</p>
+					<div id="lowernavigation2" class="hidden">
+						<a href="">Squared</a>
+					</div>
+				</div>
+				<div>
+					<a href="">ABOUT</a><p onclick="CallSubNavigation('news')">&#x25BC;</p>
+					<div id="lowernavigation3" class="hidden">
+						<a href="">Team</a>
+						<a href="">Contact</a>
+					</div>
+				</div>
 		</div>
 		<!--Header-->
 		<div id="header">

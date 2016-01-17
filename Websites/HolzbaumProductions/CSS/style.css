@@ -104,6 +104,14 @@ img{
 	color:rgb(30, 96, 97);
 }
 
+#mobilenavigationbutton{
+	display:none;
+}
+
+#mobilenavigationOff{
+		display:none;
+}
+
 #firstsection{
 	margin-right:5%;
 }
@@ -116,6 +124,10 @@ img{
 	margin-left:10px;
 	z-index:2;
 	float:left;
+}
+
+#logomobile{
+	display:none;
 }
 
 #mobileheader{

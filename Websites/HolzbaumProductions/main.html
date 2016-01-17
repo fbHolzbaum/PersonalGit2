@@ -6,7 +6,8 @@
 		<link rel="stylesheet" href="css/style1400.css" media="screen and (max-width: 1400px)"> 
 		<link rel="stylesheet" href="css/style1200.css" media="screen and (max-width: 1200px)">
 		<link rel="stylesheet" href="css/style1000.css" media="screen and (max-width: 1000px)">
-		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)"> 
+		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
+		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)"> 
 		
 		<!-- Javascript Part -->
 		<script>
@@ -20,6 +21,7 @@
 					document.getElementById("mobilenavigationOff").id = 'mobilenavigation';
 					document.getElementById("mobilenavigationbutton").style.background = "rgb(30, 96, 97)";
 					document.getElementById("body").className = "stop-scrolling";
+					document.getElementById("navigationbuttonimage").src="images/main/x.jpg";
 					menuOpen = true;
 				}else
 				{
@@ -27,20 +29,48 @@
 					document.getElementById("mobilenavigation").id = 'mobilenavigationOff';
 					document.getElementById("mobilenavigationbutton").style.background = "white";
 					document.getElementById("body").className = "";
+					document.getElementById("navigationbuttonimage").src="images/main/menubutton.png";
 					menuOpen = false;
 				}
 			}
 			
 			
-			function CallSubNavigation(name)
+			var openSubCategory = 0;
+			function CallSubNavigation(idNumber)
 			{
-				switch(name)
+				DisableAllNavigation(); //Set every open subcategory back
+				if(idNumber != openSubCategory)
 				{
-					case "news": document.getElementById("lowernavigation1").className = "lowernavigation"; break;
-					case "games": document.getElementById("lowernavigation2").className = "lowernavigation"; break;
-					case "about": document.getElementById("lowernavigation3").className = "lowernavigation"; break;
+					//idnumbers: 1 -> news, 2 -> games, 3 -> about				
+					var navigationString = "navigation" + idNumber;
+					var subNavigationString = "lower" + navigationString;
+					var arrowString = "arrow" + idNumber;
+					document.getElementById(navigationString).style.background = "rgba(28, 88, 89, 0.98)";
+					document.getElementById(subNavigationString).className = "lowernavigation";
+					document.getElementById(arrowString).innerHTML = "&#x25B2";
+					
+					openSubCategory = idNumber;
+				}else{
+					openSubCategory = 0;
 				}
 			}
+			
+			function DisableAllNavigation()
+			{
+				document.getElementById("navigation1").style.background = "";
+				document.getElementById("lowernavigation1").className = "hidden";
+				document.getElementById("arrow1").innerHTML = "&#x25BC";
+				
+				document.getElementById("navigation2").style.background = "";
+				document.getElementById("lowernavigation2").className = "hidden";
+				document.getElementById("arrow2").innerHTML = "&#x25BC";
+				
+				document.getElementById("navigation3").style.background = "";
+				document.getElementById("lowernavigation3").className = "hidden";
+				document.getElementById("arrow3").innerHTML = "&#x25BC";
+			}
+			
+			
 		//-->
 		</script>
 		
@@ -69,35 +99,41 @@
 			</div>
 			<!-- ONly for mobile -->
 			<div id="mobilenavigationbutton"  onclick="CallNavigation()">
-				<img src="images/main/menubutton.png">			
+				<img src="images/main/menubutton.png" id="navigationbuttonimage">			
 			</div>
 		</div>
 		<!-- ONly for mobile -->
 		<div id="mobilenavigationOff">
-				<div style="margin-top:10px">
-					<a href="">HOME</a>
+			<div style="margin-top:10px">
+				<a href="">HOME</a>
+			</div>
+			<div id="navigation1">
+				<a href="">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<div id="lowernavigation1" class="hidden">
+					<a href="">Website</a>
+					<a href="">Twitter</a>
 				</div>
-				<div>
-					<a href="">NEWS</a><p onclick="CallSubNavigation('news')">&#x25BC;</p>
-					<div id="lowernavigation1" class="hidden">
-						<a href="">Website</a>
-						<a href="">Twitter</a>
-					</div>
+			</div>
+			<div id="navigation2">
+				<a href="">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
+				<div id="lowernavigation2" class="hidden">
+					<a href="">Squared</a>
 				</div>
-				<div>
-					<a href="">GAMES</a><p onclick="CallSubNavigation('games')">&#x25BC;</p>
-					<div id="lowernavigation2" class="hidden">
-						<a href="">Squared</a>
-					</div>
+			</div>
+			<div id="navigation3">
+				<a href="">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
+				<div id="lowernavigation3" class="hidden">
+					<a href="">Team</a>
+					<a href="">Contact</a>
 				</div>
-				<div>
-					<a href="">ABOUT</a><p onclick="CallSubNavigation('news')">&#x25BC;</p>
-					<div id="lowernavigation3" class="hidden">
-						<a href="">Team</a>
-						<a href="">Contact</a>
-					</div>
-				</div>
+			</div>
+			<div id="mobileSocialMediaDiv">
+				<a href="https://www.facebook.com/HolzbaumProductions"><img src="images/main/FBLogo_72.png"></a> &nbsp;
+				<a href="https://twitter.com/HolzbaumP"><img src="images/main/TwitterLogo_white.png" style="background-color:rgb(85,172,238);"></a>
+			</div>
 		</div>
+		
+		
 		<!--Header-->
 		<div id="header">
 			<div id="headerimage">

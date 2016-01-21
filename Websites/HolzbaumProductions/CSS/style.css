@@ -28,6 +28,12 @@ p{
 	font-size:18px;
 }
 
+div{
+	height:auto;
+	width:100%;
+	max-width:1900px;
+}
+
 h1, h2, h3{
 	color:rgb(48,49,49);
 	font-family:"Arial"
@@ -303,5 +309,66 @@ footer{
 	width:50px;
 	margin-left:6px;
 }
+
+
+
+/* Here begins the team css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+#teamdiv{
+	margin:auto;
+	width:100%;
+	max-width:1900px;
+}
+
+.teammember{
+	height:500px;
+	width:100%;
+	margin:auto;
+}
+
+#memberfoto{
+	width:30%;
+	height:100%;
+}
+
+#memberfoto img{
+	width:400px;
+	height:400px;
+	margin-top:50px;
+	margin-left:100px;
+}
+
+#membertext{
+	width:70%;
+	height:400px;
+	margin-top:50px;
+	margin-bottom:auto;
+}
+
+#membertext p, h2, h3{
+	margin-left:100px;
+	margin-right:100px;
+	width:auto;
+}
+
+#membertext h2{
+	margin-top:100px;
+}
+
+#membertext p{
+	font-size:20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 

@@ -341,7 +341,7 @@ footer{
 }
 
 #membertext{
-	width:70%;
+	width:45%;
 	height:400px;
 	margin-top:50px;
 	margin-bottom:auto;
@@ -355,14 +355,32 @@ footer{
 
 #membertext h2{
 	margin-top:100px;
+	margin-bottom:5px;
+	
 }
 
+#membertext h3{
+	margin-top:5px;
+	font-size:20px;
+	color:rgb(30, 96, 97);
+}
+
+
 #membertext p{
+	margin-top:40px;
 	font-size:20px;
 }
 
 
+#contactdiv{
+	margin:auto;
+	width:100%;
+	max-width:1900px;
+}
 
+#contactdiv h2{
+	text-align:center;
+}
 
 
 

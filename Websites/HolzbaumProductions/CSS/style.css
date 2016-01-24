@@ -329,41 +329,47 @@ footer{
 	margin:auto;
 	width:100%;
 	max-width:1900px;
+	background-color:rgba(220, 220, 220, 0.5);
 }
 
 .teammember{
-	height:500px;
-	width:100%;
+	height:800px;
+	width:33%;
 	margin:auto;
+	background-color:rgba(220, 220, 220, 0.5);
+	padding-bottom:50px;
 }
 
 #memberfoto{
-	width:30%;
-	height:100%;
+	margin-top:100px;
+	width:100%;
+	height:auto;
+	
 }
 
 #memberfoto img{
 	width:400px;
 	height:400px;
-	margin-top:50px;
-	margin-left:100px;
+	display:block;
+	margin:auto;
 }
 
 #membertext{
-	width:45%;
-	height:400px;
-	margin-top:50px;
-	margin-bottom:auto;
+	width:400px;
+	display:block;
+	height:300px;
+	max-height:400px;
+	margin:auto;
+
 }
 
 #membertext p, h2, h3{
-	margin-left:100px;
-	margin-right:100px;
 	width:auto;
+	margin:auto;
 }
 
 #membertext h2{
-	margin-top:100px;
+	margin-top:40px;
 	margin-bottom:5px;
 	
 }
@@ -378,6 +384,7 @@ footer{
 #membertext p{
 	margin-top:40px;
 	font-size:20px;
+	display:block;
 }
 
 

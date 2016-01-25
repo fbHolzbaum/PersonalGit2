@@ -467,15 +467,16 @@ form textarea{
 
 #message{
 	width:60%;
-	background-color:rgb(30, 96, 97);
+	background-color:rgba(97,150,50,0.9);
+	border-style:solid;
+	border-width:2px;
+	border-color:rgb(84, 127, 43);
 	color:white;
-	font-weight: bold;
-	font-size:30px;
+	font-size:20px;
 	text-align:center;
 	vertical-align:middle;
 	margin:auto;
-	margin-top:50px;
-	padding-top:10px;
-	padding-bottom:10px;
+	padding-top:5px;
+	padding-bottom:5px;
 }
 

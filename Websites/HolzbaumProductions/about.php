@@ -202,14 +202,15 @@
 			&nbsp;
 				<h2>Contact Us:</h2>
 				
+				<?php if(ISSET($GLOBALS["notification"])){echo "<p id='message'>Text</p>";}?>
+				<p id='message'>Text</p>
+				
 				<form action="about.php" method="POST"> <!-- This form calls the php function SendMail -->
 					<p> <label for="formname">NAME: </label> </p> <input type="text" required name="formname" id="formname" />
 					<p> <label for="formemail">EMAIL: </label> </p> <input type="email"  required name="formemail" id="formemail" />
 					<p> <label for="formmessage">YOUR MESSAGE: </label> </p> <textarea required name="formmessage" id="formmessage" rows="8" cols="80" maxlength="1000"></textarea>
 					<p> <input type="submit" id="formsubmit" name="formsubmit"> </p>
-				</form>
-				
-				<?php if(ISSET($GLOBALS["notification"])){echo "<p id='message'>Text</p>";}?>
+				</form>	
 			</div>
 		</div>
 	</body>

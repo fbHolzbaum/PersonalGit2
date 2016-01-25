@@ -28,9 +28,10 @@
 				$name = $_POST["formname"];
 				$mail = $_POST["formemail"];
 				$message = $_POST["formmessage"];
+				$subject = 'Usermessage ' + $mail;
 				
 				// Send
-				mail($mail, 'Usermessage holzbaumproductions.com', $message, null,'no-reply@holzbaumproductions.com');
+				mail('holzbaumproductions@gmail.com', 'subject', $message, null,'no-reply@holzbaumproductions.com');
 				
 				$GLOBALS["notification"] = "Your message has been sent.";
 			}
@@ -203,7 +204,6 @@
 				<h2>Contact Us:</h2>
 				
 				<?php if(ISSET($GLOBALS["notification"])){echo "<p id='message'>Text</p>";}?>
-				<p id='message'>Text</p>
 				
 				<form action="about.php" method="POST"> <!-- This form calls the php function SendMail -->
 					<p> <label for="formname">NAME: </label> </p> <input type="text" required name="formname" id="formname" />

@@ -11,6 +11,31 @@
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
 		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)"> 
 		
+		<!-- PHP Part -->
+		<?php
+			$error;
+		
+			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
+			{
+				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed
+					
+					SendMail();
+				}
+			}
+			
+			function SendMail()
+			{
+				$name = $_POST["formname"];
+				$mail = $_POST["formemail"];
+				$message = $_POST["formmessage"];
+				
+				// Send
+				mail($mail, 'Usermessage holzbaumproductions.com', $message, null,'no-reply@holzbaumproductions.com');
+				
+				$GLOBALS["notification"] = "Your message has been sent.";
+			}
+		?>
+		
 		<!-- Javascript Part -->
 		<script>
 		//<!--
@@ -177,12 +202,14 @@
 			&nbsp;
 				<h2>Contact Us:</h2>
 				
-				<form action="action_page.php">
+				<form action="about.php" method="POST"> <!-- This form calls the php function SendMail -->
 					<p> <label for="formname">NAME: </label> </p> <input type="text" required name="formname" id="formname" />
 					<p> <label for="formemail">EMAIL: </label> </p> <input type="email"  required name="formemail" id="formemail" />
-					<p> <label for="formmessage">YOUR MESSAGE: </label> </p> <textarea name="formmessage" id="formmessage" rows="8" cols="80" ></textarea>
-					<p> <input type="submit" id="formsubmit"> </p>
+					<p> <label for="formmessage">YOUR MESSAGE: </label> </p> <textarea required name="formmessage" id="formmessage" rows="8" cols="80" maxlength="1000"></textarea>
+					<p> <input type="submit" id="formsubmit" name="formsubmit"> </p>
 				</form>
+				
+				<p id="message">Text</p>
 			</div>
 		</div>
 	</body>

@@ -32,6 +32,7 @@ div{
 	height:auto;
 	width:100%;
 	max-width:1900px;
+	margin:auto;
 }
 
 h1, h2, h3{
@@ -337,10 +338,11 @@ footer{
 }
 
 .teammember{
+	float:left;
 	height:800px;
 	width:33%;
 	margin:auto;
-	background-color:rgba(220, 220, 220, 0.5);
+	background-color:rgba(220, 220, 220, 0);
 	padding-bottom:50px;
 }
 
@@ -425,14 +427,22 @@ form input{
 	width:100%;
 	height:65px;
 	margin-bottom:0px;
+	font-size:32px;
+	color:rgb(68,69,69);
+	padding:10px;
 }
 
 form textarea{
 	width:100%;
 	height:200px;
+	font-size:32px;
+	color:rgb(68,69,69);
+	font-family:"Arial";
+	padding:10px;
 }
 
 #formsubmit{
+	border:0px;
 	display:block;
 	margin:auto;
 	width:auto;
@@ -441,12 +451,12 @@ form textarea{
 	color:white;
 	padding:15px 100px;
 	background-color:rgb(30, 96, 97);
-	border-radius:31px;
+	border-radius:33px;
 	margin-top:100px;
 }
 
 #formsubmit:hover{
 	padding:17px 105px;
-	border-radius:32px;
+	border-radius:34px;
 }
 

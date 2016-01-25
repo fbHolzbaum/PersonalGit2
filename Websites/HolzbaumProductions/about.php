@@ -209,7 +209,7 @@
 					<p> <input type="submit" id="formsubmit" name="formsubmit"> </p>
 				</form>
 				
-				<p id="message">Text</p>
+				<?php if(ISSET($GLOBALS["notification"])){echo "<p id='message'>Text</p>";}?>
 			</div>
 		</div>
 	</body>

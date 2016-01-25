@@ -187,15 +187,16 @@ img{
 
 #headerinformation h1{
 	font-size:80px;
-	margin-top:0px;
+	margin-top:20px;
 	padding-top:0px;
 	padding-bottom:0px;
-	margin-bottom:10px;
+	margin-bottom:40px;
 	color:rgb(30, 96, 97);
 	text-shadow: 1px 1px rgba(25, 89, 90, 0.5);
 }
 
 #headerinformation h2{
+	margin-top:10px;
 	margin-bottom:0px;
 	padding-bottom:0px;
 	color:white;
@@ -203,6 +204,8 @@ img{
 }
 
 #headerinformation h3{
+	margin-top:30px;
+	margin-bottom:20px;
 	color:white;
 	padding-bottom:50px;
 	text-shadow: 1px 1px rgba(240, 240, 240, 0.5);

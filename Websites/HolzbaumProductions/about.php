@@ -116,7 +116,7 @@
 				<img src="images/main/hplogo_mobile.jpg">
 			</div>
 			<div class="navigationsection" id="firstsection">
-				<a href="about.html">ABOUT</a>
+				<a href="about.php">ABOUT</a>
 			</div>
 			<div class="navigationsection">
 				<a href="">GAMES</a>
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 			<div id="navigation3">
-				<a href="about.html">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
+				<a href="about.php">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
 				<div id="lowernavigation3" class="hidden">
 					<a href="">Team</a>
 					<a href="">Contact</a>
@@ -233,7 +233,7 @@
 			</div>
 			
 			<div class="footerlink">
-				<a href="about.html" style="font-weight:bold;">ABOUT</a><br>
+				<a href="about.php" style="font-weight:bold;">ABOUT</a><br>
 				<a href="">Team</a><br>
 				<a href="">Contact</a>
 			</div>

@@ -13,7 +13,7 @@
 		
 		<!-- Javascript Part -->
 		<script>
-		//<!--
+		//<!--		
 			var menuOpen = false;
 			function CallNavigation(){
 				//Change navigationbutton background
@@ -109,13 +109,13 @@
 		<!-- ONly for mobile -->
 		<div id="mobilenavigationOff">
 			<div style="margin-top:10px">
-				<a href="index.html">HOME</a>
+				<a href="index.html" onclick="CallNavigation()">HOME</a>
 			</div>
 			<div id="navigation1">
-				<a href="index.html#newstitel">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<a href="index.html#newstitel" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
 				<div id="lowernavigation1" class="hidden">
-					<a href="index.html#news">Website</a>
-					<a href="index.html#twitterwindow">Twitter</a>
+					<a href="index.html#news" onclick="CallNavigation()">Website</a>
+					<a href="index.html#twitterwindow" onclick="CallNavigation()">Twitter</a>
 				</div>
 			</div>
 			<div id="navigation2">

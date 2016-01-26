@@ -149,10 +149,10 @@
 				</div>
 			</div>
 			<div id="navigation3">
-				<a href="about.php">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
+				<a href="about.php" onclick="CallNavigation()">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
 				<div id="lowernavigation3" class="hidden">
-					<a href="">Team</a>
-					<a href="">Contact</a>
+					<a href="about.php#teamdiv" onclick="CallNavigation()">Team</a>
+					<a href="about.php#contactcontainer" onclick="CallNavigation()">Contact</a>
 				</div>
 			</div>
 			<div id="mobileSocialMediaDiv">

@@ -84,7 +84,7 @@
 		<div id="topcolor"></div>
 	</header>
 	
-	<body id="body" onload="DisableAllNavigation();">
+	<body id="body">
 		<div id="navigationbar">
 			<div id="logo">
 				<img src="images/main/hplogo.jpg">
@@ -112,9 +112,9 @@
 				<a href="index.html" onclick="CallNavigation()">HOME</a>
 			</div>
 			<div id="navigation1">
-				<a href="index.html#newstitel" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<a href="index.html#mainsection" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
 				<div id="lowernavigation1" class="hidden">
-					<a href="index.html#news" onclick="CallNavigation()">Website</a>
+					<a href="index.html#mainsection" onclick="CallNavigation()">Website</a>
 					<a href="index.html#twitterwindow" onclick="CallNavigation()">Twitter</a>
 				</div>
 			</div>
@@ -125,10 +125,10 @@
 				</div>
 			</div>
 			<div id="navigation3">
-				<a href="about.php">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
+				<a href="about.php" onclick="CallNavigation()">ABOUT</a><p onclick="CallSubNavigation(3)" id="arrow3">&#x25BC;</p>
 				<div id="lowernavigation3" class="hidden">
-					<a href="">Team</a>
-					<a href="">Contact</a>
+					<a href="about.php#teamdiv" onclick="CallNavigation()">Team</a>
+					<a href="about.php#contactcontainer" onclick="CallNavigation()">Contact</a>
 				</div>
 			</div>
 			<div id="mobileSocialMediaDiv">
@@ -191,8 +191,8 @@
 			</div>
 			
 			<div class="footerlink">
-				<a href="index.html#newstitel" style="font-weight:bold;">NEWS</a><br>
-				<a href="index.html#news">Website News</a><br>
+				<a href="index.html#mainsection" style="font-weight:bold;">NEWS</a><br>
+				<a href="index.html#mainsection">Website News</a><br>
 				<a href="index.html#twitterwindow">Twitter News</a>
 			</div>
 			
@@ -203,8 +203,8 @@
 			
 			<div class="footerlink">
 				<a href="about.php" style="font-weight:bold;">ABOUT</a><br>
-				<a href="">Team</a><br>
-				<a href="">Contact</a>
+				<a href="about.php#teamdiv">Team</a><br>
+				<a href="about.php#contactcontainer">Contact</a>
 			</div>
 			
 			<div id="socialmediacontainer">

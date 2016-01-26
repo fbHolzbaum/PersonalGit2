@@ -28,7 +28,7 @@
 				$name = $_POST["formname"];
 				$mail = $_POST["formemail"];
 				$message = $_POST["formmessage"];
-				$subject = 'Contact from user: '. $formname .', '. $mail;
+				$subject = 'Contact from user: '. $name .', '. $mail;
 				
 				// Send
 				mail('holzbaumproductions@gmail.com', $subject, $message, null,'no-reply@holzbaumproductions.com');
@@ -136,9 +136,9 @@
 				<a href="index.html">HOME</a>
 			</div>
 			<div id="navigation1">
-				<a href="index.html#newstitel">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<a href="index.html#mainsection">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
 				<div id="lowernavigation1" class="hidden">
-					<a href="index.html#news">Website</a>
+					<a href="index.html#mainsection">Website</a>
 					<a href="index.html#twitterwindow">Twitter</a>
 				</div>
 			</div>
@@ -209,7 +209,7 @@
 					<p> <label for="formname">NAME: </label> </p> <input type="text" required name="formname" id="formname" />
 					<p> <label for="formemail">EMAIL: </label> </p> <input type="email"  required name="formemail" id="formemail" />
 					<p> <label for="formmessage">YOUR MESSAGE: </label> </p> <textarea required name="formmessage" id="formmessage" rows="8" cols="80" maxlength="1000"></textarea>
-					<p> <input type="submit" id="formsubmit" name="formsubmit"> </p>
+					<p> <input type="submit" id="formsubmit" name="formsubmit" value="Send"> </p>
 				</form>	
 			</div>
 		</div>
@@ -222,8 +222,8 @@
 			</div>
 			
 			<div class="footerlink">
-				<a href="index.html#newstitel" style="font-weight:bold;">NEWS</a><br>
-				<a href="index.html#news">Website News</a><br>
+				<a href="index.html#mainsection" style="font-weight:bold;">NEWS</a><br>
+				<a href="index.html#mainsection">Website News</a><br>
 				<a href="index.html#twitterwindow">Twitter News</a>
 			</div>
 			
@@ -234,8 +234,8 @@
 			
 			<div class="footerlink">
 				<a href="about.php" style="font-weight:bold;">ABOUT</a><br>
-				<a href="">Team</a><br>
-				<a href="">Contact</a>
+				<a href="about.php#teamdiv">Team</a><br>
+				<a href="about.php#contactcontainer">Contact</a>
 			</div>
 			
 			<div id="socialmediacontainer">

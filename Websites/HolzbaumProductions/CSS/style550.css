@@ -25,7 +25,7 @@
 }
 
 .memberfoto{
-	margin-top:50px;
+	margin-top:75px;
 }
 
 .memberfoto img{
@@ -61,7 +61,35 @@
 }
 
 
+#contactdiv h2{
+	margin-top:100px;
+	text-align:center;
+	font-size:40px;
+	margin-bottom:100px;
+}
+
+form{
+	width:70%;
+}
+
+form label{
+	font-size:22px;
+}
+
 form input{
 	font-size:23px;
 	height:45px;
+}
+
+
+#formsubmit{
+	font-size:18px;
+	padding:15px 80px;
+	margin-top:80px;
+}
+
+#formsubmit:hover{
+	padding:17px 84px;
+	padding-top:17px;
+	padding-bottom:33px;
 }

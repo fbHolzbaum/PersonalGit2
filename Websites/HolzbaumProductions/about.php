@@ -165,7 +165,7 @@
 		<!-- Main section -->
 		<div id="teamdiv" >
 			<div class="teammember" >
-				<div id="memberfoto">
+				<div class="memberfoto">
 					<img src="images/team/foto.jpg">
 				</div>
 				<div id="membertext">
@@ -175,8 +175,8 @@
 				</div>
 			</div>
 			
-			<div class="teammember" style="float:left;">
-				<div id="memberfoto">
+			<div class="teammember" id="member2">
+				<div class="memberfoto">
 					<img src="images/team/foto.jpg">
 				</div>
 				<div id="membertext">
@@ -186,8 +186,8 @@
 				</div>
 			</div>
 			
-			<div class="teammember" style="float:left;">
-				<div id="memberfoto">
+			<div class="teammember" id="member3">
+				<div class="memberfoto">
 					<img src="images/team/foto.jpg">
 				</div>
 				<div id="membertext">

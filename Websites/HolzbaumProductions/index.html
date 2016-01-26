@@ -70,6 +70,8 @@
 				document.getElementById("navigation3").style.background = "";
 				document.getElementById("lowernavigation3").className = "hidden";
 				document.getElementById("arrow3").innerHTML = "&#x25BC";
+				
+				document.getElementById("body").className = "";
 			}
 			
 			
@@ -82,7 +84,7 @@
 		<div id="topcolor"></div>
 	</header>
 	
-	<body id="body">
+	<body id="body" onload="DisableAllNavigation();">
 		<div id="navigationbar">
 			<div id="logo">
 				<img src="images/main/hplogo.jpg">

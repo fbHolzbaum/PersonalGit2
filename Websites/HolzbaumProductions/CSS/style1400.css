@@ -23,3 +23,26 @@
 	padding-bottom:40px;
 	font-size:22px;
 }
+
+
+/* Here begins the team css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#teamdiv{
+	min-height:1600px;
+}
+
+
+.teammember{
+	width:50%;
+}
+
+#member3{
+	float:none;
+}
+
+#member3 .memberfoto{
+	margin-top:0px;
+}

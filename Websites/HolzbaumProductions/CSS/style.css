@@ -347,14 +347,14 @@ footer{
 	padding-bottom:50px;
 }
 
-#memberfoto{
+.memberfoto{
 	margin-top:100px;
 	width:100%;
 	height:auto;
 	
 }
 
-#memberfoto img{
+.memberfoto img{
 	width:400px;
 	height:400px;
 	display:block;
@@ -367,7 +367,6 @@ footer{
 	height:300px;
 	max-height:400px;
 	margin:auto;
-
 }
 
 #membertext p, h2, h3{
@@ -400,6 +399,9 @@ footer{
 	width:100%;
 	max-width:1900px;
 	padding-bottom:100px;
+	-webkit-box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
+	-moz-box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
+	box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
 }
 
 #contactdiv h2{

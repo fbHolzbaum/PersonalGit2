@@ -81,7 +81,7 @@ img{
 	width:100%;
 	max-width:1900px;
 	height:140px;
-	background-color:rgba(255, 255, 255, 0.5);
+	background-color:rgba(255, 255, 255, 1);
 	z-index:2;
 	position:relative;
 	display:table;
@@ -482,3 +482,67 @@ form textarea{
 	padding-bottom:5px;
 }
 
+
+
+
+/* Here begins the games css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+
+#gamechoice{
+	width:100%;
+	height:auto;
+	display:block;
+}
+
+#gamechoiceimage{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	width:960px;
+	height:auto;
+}
+
+#gamechoiceimage img{
+	width:960px;
+	height:430px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+}
+
+#gamechoiceinfo{
+	margin:auto;
+	width:960px;
+	margin-bottom:100px;
+	height:70px;
+	background-color:rgb(30, 96, 97);
+	text-align:center;
+	display:table;
+	-webkit-box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
+	-moz-box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
+	box-shadow: 0px -1px 0px 0px rgba(194,194,194,0.5);
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+}
+#gamechoiceinfo a{
+	display:table-cell;
+	font-size:40px;
+	padding:0px;
+	background-color:none;
+	height:100%;
+	width:100%;
+	vertical-align:middle;
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(194,194,194,0);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(194,194,194,0);
+	box-shadow: 0px 0px 0px 0px rgba(194,194,194,0);
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+}
+
+#gamechoiceinfo :hover{
+	background-color:rgb(97,150,50);
+}

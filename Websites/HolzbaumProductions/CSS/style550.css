@@ -4,11 +4,30 @@
 	width:80%;
 }
 
+#mainsection h1{
+	margin-top:60px;
+	font-size:40px;
+	text-align:center;
+	
+}
+
 #twitterwindow div{
 	width:320px;
 	margin-right:auto;
 	margin-left:auto;
 }
+
+
+#mobileheader div a{
+	font-size:16px;
+	padding:10px 70px;
+	border-radius:25px;
+}
+
+#mobileheader div a:hover{
+	padding:11px 74px;
+}
+
 
 
 

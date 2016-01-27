@@ -11,35 +11,9 @@
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
 		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)"> 
 		
-		<!-- PHP Part -->
-		<?php
-			$error;
-		
-			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
-			{
-				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed
-					
-					SendMail();
-				}
-			}
-			
-			function SendMail()
-			{
-				$name = $_POST["formname"];
-				$mail = $_POST["formemail"];
-				$message = $_POST["formmessage"];
-				$subject = 'Contact from user: '. $name .', '. $mail;
-				
-				// Send
-				mail('holzbaumproductions@gmail.com', $subject, $message, null,'no-reply@holzbaumproductions.com');
-				
-				$GLOBALS["notification"] = "Your message has been sent.";
-			}
-		?>
-		
 		<!-- Javascript Part -->
 		<script>
-		//<!--
+		//<!--		
 			var menuOpen = false;
 			function CallNavigation(){
 				//Change navigationbutton background
@@ -96,6 +70,8 @@
 				document.getElementById("navigation3").style.background = "";
 				document.getElementById("lowernavigation3").className = "hidden";
 				document.getElementById("arrow3").innerHTML = "&#x25BC";
+				
+				document.getElementById("body").className = "";
 			}
 			
 			
@@ -108,7 +84,7 @@
 		<div id="topcolor"></div>
 	</header>
 	
-	<body id="body" style="background-color:white">
+	<body id="body">
 		<div id="navigationbar">
 			<div id="logo">
 				<img src="images/main/hplogo.jpg">
@@ -133,19 +109,19 @@
 		<!-- ONly for mobile -->
 		<div id="mobilenavigationOff">
 			<div style="margin-top:10px">
-				<a href="index.html">HOME</a>
+				<a href="index.html" onclick="CallNavigation()">HOME</a>
 			</div>
 			<div id="navigation1">
-				<a href="index.html#mainsection">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<a href="index.html#mainsection" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
 				<div id="lowernavigation1" class="hidden">
-					<a href="index.html#mainsection">Website</a>
-					<a href="index.html#twitterwindow">Twitter</a>
+					<a href="index.html#mainsection" onclick="CallNavigation()">Website</a>
+					<a href="index.html#twitterwindow" onclick="CallNavigation()">Twitter</a>
 				</div>
 			</div>
 			<div id="navigation2">
-				<a href="games.html">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
+				<a href="games.html" onclick="CallNavigation()">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
 				<div id="lowernavigation2" class="hidden">
-					<a href="squared.html">Squared</a>
+					<a href="squared.html" onclick="CallNavigation()">Squared</a>
 				</div>
 			</div>
 			<div id="navigation3">
@@ -162,57 +138,14 @@
 		</div>
 		
 		
-		<!-- Main section -->
-		<div id="teamdiv" >
-			<div class="teammember" >
-				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
-				</div>
-				<div id="membertext">
-					<h2>Roman Martinello</h2>
-					<h3>Orange Whale</h3>
-					<p>Well, he is a whale. And orange. An orange whale. A big orange whale. A really really big and very orange whale. He is fat.</p>
-				</div>
-			</div>
-			
-			<div class="teammember" id="member2">
-				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
-				</div>
-				<div id="membertext">
-					<h2>Felipe Blanco</h2>
-					<h3>Tanktop Master</h3>
-					<p>If Ninjas one day decide to attack the world, is all humanity doomed? Not as long as there are the tank top fighters! Tanktop Master, the one worthy of the tanktop.</p>
-				</div>
-			</div>
-			
-			<div class="teammember" id="member3">
-				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
-				</div>
-				<div id="membertext">
-					<h2>Micha Brunner</h2>
-					<h3>Powerdice</h3>
-					<p>He loves Tesla. He really does. No, really. If you get to know him, you will see. But he is not rich enough to get a Tesla. That's pretty harsh. I wonder if I should give him some kind of payment once... probably not.</p>
-				</div>
-			</div>
+		<!--Content-->
+		<div id="gameimage">
+			<img src="images/squared/squared_titleimage.jpg">
 		</div>
-
-		<div id="contactcontainer">
-			<div id="contactdiv">
-			&nbsp;
-				<h2>Contact Us:</h2>
-				
-				<?php if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}?>
-				
-				<form action="about.php" method="POST"> <!-- This form calls the php function SendMail -->
-					<p> <label for="formname">NAME: </label> </p> <input type="text" required name="formname" id="formname" />
-					<p> <label for="formemail">EMAIL: </label> </p> <input type="email"  required name="formemail" id="formemail" />
-					<p> <label for="formmessage">YOUR MESSAGE: </label> </p> <textarea required name="formmessage" id="formmessage" rows="8" cols="80" maxlength="1000"></textarea>
-					<p> <input type="submit" id="formsubmit" name="formsubmit" value="Send"> </p>
-				</form>	
-			</div>
-		</div>
+	
+	
+	
+		
 	</body>
 	<footer>
 		

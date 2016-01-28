@@ -112,3 +112,24 @@ form input{
 	padding-top:17px;
 	padding-bottom:33px;
 }
+
+
+
+/* Here begins the games css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gamechoiceimage{
+	width:384px;
+}
+
+#gamechoiceimage img{
+	width:384px;
+	height:177px;
+}
+
+#gamechoiceinfo{
+	width:384px;
+	height:60px;
+}

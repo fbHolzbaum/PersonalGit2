@@ -270,9 +270,33 @@ footer{
 }
 
 
+
 /* Here begins the games css
 //////////////////////////
 //////////////////////////
 ////////////////////////*/
 
+#gamechoiceimage{
+	margin-top:50px;
+	width:500px;
+}
 
+#gamechoiceimage img{
+	width:500px;
+	height:224px;
+}
+
+#gamechoiceinfo{
+	width:500px;
+	margin-bottom:25px;
+	height:50px;
+}
+
+#gamechoiceinfo a{
+	font-size:35px;
+}
+
+.greybody{
+	background-color:rgba(220, 220, 220, 0.5);
+}
+}

@@ -97,3 +97,25 @@
 #firstfooterlink{
 	margin-left:175px!important;	
 }
+
+
+/* Here begins the games css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gamechoiceimage{
+	margin-top:100px;
+	width:768px;
+}
+
+#gamechoiceimage img{
+	width:768px;
+	height:344px;
+}
+
+#gamechoiceinfo{
+	width:768px;
+	margin-bottom:100px;
+	height:60px;
+}

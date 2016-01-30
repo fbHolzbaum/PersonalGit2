@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/style1200.css" media="screen and (max-width: 1200px)">
 		<link rel="stylesheet" href="css/style1000.css" media="screen and (max-width: 1000px)">
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
-		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)"> 
+		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)">
 		<link rel="stylesheet" href="css/style400.css" media="screen and (max-width: 400px)"> 
 		
 		<!-- Javascript Part -->
@@ -85,7 +85,7 @@
 		<div id="topcolor"></div>
 	</header>
 	
-	<body id="body">
+	<body id="body" class="greybody">
 		<div id="navigationbar">
 			<div id="logo">
 				<img src="images/main/hplogo.jpg">
@@ -120,9 +120,9 @@
 				</div>
 			</div>
 			<div id="navigation2">
-				<a href="games.html" onclick="CallNavigation()">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
+				<a href="games.html">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
 				<div id="lowernavigation2" class="hidden">
-					<a href="squared.html" onclick="CallNavigation()">Squared</a>
+					<a href="squared.html">Squared</a>
 				</div>
 			</div>
 			<div id="navigation3">
@@ -140,10 +140,30 @@
 		
 		
 		<!--Content-->
-		<div id="gameimage">
-			<img src="images/squared/squared_titleimage.jpg">
+		<div id="game">
+			<div id="gameinfo" style="background-color:rgb(183,217,242);">
+				<img src="images/squared/squared_title.png">
+				<p>Ready for a mind-puzzling game?</p><p>Squared is a tricky puzzle game that puts your mind to the test, in a fun way. It is a game for puzzle solvers that like the feeling of having figured out tricky puzzles. The main idea is to have all tiles on a board turn from the initial color to <font color="orange">orange</font>.</p>
+				<div id="gamestorebutton">
+					<img src="images/main/googleplay.png">
+				</div>
+				<!--<div id="gamestorebutton">
+					<img src="images/main/appstore.png">
+				</div>-->
+			</div>
+			<div id="gametrailer">
+				<iframe src="https://www.youtube.com/embed/pT-VU3akc2M" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div id="gamescreenshots">
+				<img src="images/squared/screenshot1.png">
+				<img src="images/squared/screenshot2.png">
+				<img src="images/squared/screenshot2.png">
+				<img src="images/squared/screenshot2.png">
+				<img src="images/squared/screenshot2.png">
+				<img src="images/squared/screenshot1.png">
+			</div>
 		</div>
-	
+		
 	
 	
 		

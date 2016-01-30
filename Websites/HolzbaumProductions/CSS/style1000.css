@@ -183,3 +183,28 @@ form textarea{
 }
 
 
+
+
+/* Here begins the single game css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gameinfo p{
+	width:600px;
+	font-size:26px;
+	margin-bottom:28px;
+}
+
+#gametrailer iframe{
+	height:360px;
+	width:640px;
+}
+
+#gamescreenshots img{
+	height:175px;
+	width:312px;
+	border:1px solid rgba(25, 89, 90, 0.5);
+	margin:0px;
+	padding:1px;
+}

@@ -21,3 +21,61 @@
 #gamechoiceinfo a{
 	font-size:30px;
 }
+
+
+/* Here begins the single game css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gameinfo{
+	padding-top:65px;
+	padding-bottom:65px;
+}
+
+#gameinfo img{
+	width:300px;
+	padding-bottom:20px;
+}
+
+#gameinfo p{
+	width:315px;
+	font-size:18px;
+	margin-bottom:15px;
+}
+
+#gamestorebutton{
+	padding-top:12px;
+	height:60px;
+	width:202px;
+	display:block;
+}
+
+#gamestorebutton a{
+	height:60px;
+}
+
+#gamestorebutton img{
+	height:60px;
+	width:202px;
+}
+
+
+#gametrailer{
+	padding-top:65px;
+	padding-bottom:65px;
+}
+
+#gametrailer iframe{
+	height:180px;
+	width:320px;
+}
+
+#gamescreenshots{
+	padding-top:65px;
+	padding-bottom:65px;
+}
+
+#gamescreenshots img{
+	margin-bottom:12px;
+}

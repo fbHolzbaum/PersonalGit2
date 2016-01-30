@@ -133,3 +133,61 @@ form input{
 	width:384px;
 	height:60px;
 }
+
+
+
+/* Here begins the single game css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gameinfo{
+	padding-top:75px;
+	padding-bottom:75px;
+}
+
+#gameinfo img{
+	width:340px;
+	padding-bottom:30px;
+}
+
+#gameinfo p{
+	width:360px;
+	font-size:20px;
+	margin-bottom:20px;
+}
+
+#gamestorebutton{
+	padding-top:15px;
+	height:60px;
+	width:202px;
+	display:block;
+}
+
+#gamestorebutton a{
+	height:60px;
+}
+
+#gamestorebutton img{
+	height:60px;
+	width:202px;
+}
+
+#gametrailer{
+	padding-top:75px;
+	padding-bottom:75px;
+}
+
+#gametrailer iframe{
+	height:216px;
+	width:384px;
+}
+
+#gamescreenshots{
+	padding-top:75px;
+	padding-bottom:75px;
+}
+
+#gamescreenshots img{
+	margin-bottom:15px;
+}

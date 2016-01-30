@@ -299,4 +299,56 @@ footer{
 .greybody{
 	background-color:rgba(220, 220, 220, 0.5);
 }
+
+
+
+
+/* Here begins the single game css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+
+#gameinfo img{
+	width:480px;
+	padding-bottom:40px;
+}
+
+#gameinfo p{
+	width:520px;
+	font-size:26px;
+	margin-bottom:28px;
+}
+
+#gamestorebutton{
+	padding-top:30px;
+	height:80px;
+	width:270px;
+	margin:auto;
+	display:block;
+}
+
+#gamestorebutton a{
+	height:80px;
+	width:auto;
+	margin:0px;
+	padding:0px;
+}
+
+#gamestorebutton img{
+	height:80px;
+	width:270px;
+	padding:0px;
+}
+
+#gametrailer iframe{
+	height:288px;
+	width:512px;
+}
+
+#gamescreenshots img{
+	height:175px;
+	width:312px;
+	border:1px solid rgba(25, 89, 90, 0.5);
+	margin:0px;
+	padding:1px;
 }

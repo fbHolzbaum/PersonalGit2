@@ -112,10 +112,10 @@
 	<body id="body" style="background-color:white">
 		<div id="navigationbar">
 			<div id="logo">
-				<img src="images/main/hplogo.jpg">
+				<a href="index.html"><img src="images/main/hplogo.jpg"></a>
 			</div>
 			<div id="logomobile">
-				<img src="images/main/hplogo_mobile.jpg">
+				<a href="index.html"><img src="images/main/hplogo_mobile.jpg"></a>
 			</div>
 			<div class="navigationsection" id="firstsection">
 				<a href="about.php">ABOUT</a>

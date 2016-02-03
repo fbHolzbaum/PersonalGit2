@@ -30,9 +30,12 @@
 				$mail = $_POST["formemail"];
 				$message = $_POST["formmessage"];
 				$subject = 'Contact from user: '. $name .', '. $mail;
+				$headers = 'From: support@holzbaumproductions.com'."\r\n".
+               'Reply-To: support@holzbaumproductions.com'."\r\n" .
+               'X-Mailer: PHP/' . phpversion();
 				
 				// Send
-				mail('holzbaumproductions@gmail.com', $subject, $message, null,'no-reply@holzbaumproductions.com');
+				mail('holzbaumproductions@gmail.com', $subject, $message, $headers);
 				
 				$GLOBALS["notification"] = "Your message has been sent.";
 			}

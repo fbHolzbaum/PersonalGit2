@@ -167,6 +167,7 @@
 		
 		
 		<!-- Main section -->
+		<p id="linebreak">&nbsp;</p>
 		<div id="teamdiv" >
 			<div class="teammember" >
 				<div class="memberfoto">
@@ -202,6 +203,7 @@
 			</div>
 		</div>
 
+			
 		<div id="contactcontainer">
 			<div id="contactdiv">
 			&nbsp;

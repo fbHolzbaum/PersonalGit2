@@ -7,6 +7,13 @@
 	display:none;
 }
 
+#linebreak{
+	display:inline;
+	font-size:0px;
+	margin:0px;
+	padding:0px;
+}
+
 #logo{
 	display:none;
 }
@@ -25,6 +32,8 @@
 
 #navigationbar{
 	height:70px;
+	position:fixed;
+	z-index:5;
 }
 
 #topcolor{
@@ -65,7 +74,8 @@
 }
 
 #mobilenavigation{
-		position:absolute;
+		margin-top:70px;
+		position:fixed;
 		z-index:3;
 		right:0;
 		width:250px;
@@ -148,6 +158,7 @@
 }
 
 #mobileheader{
+	margin-top:70px;
 	display:block;
 	width:100%;
 	height:auto;
@@ -276,6 +287,10 @@ footer{
 //////////////////////////
 ////////////////////////*/
 
+#gamechoice{
+	margin-top:120px;
+}
+
 #gamechoiceimage{
 	margin-top:50px;
 	width:500px;
@@ -307,6 +322,9 @@ footer{
 //////////////////////////
 //////////////////////////
 ////////////////////////*/
+#game{
+	margin-top:70px;
+}
 
 #gameinfo img{
 	width:480px;
@@ -351,4 +369,13 @@ footer{
 	border:1px solid rgba(25, 89, 90, 0.5);
 	margin:0px;
 	padding:1px;
+}
+
+
+/* Here begins the team css
+//////////////////////////
+//////////////////////////
+////////////////////////*/
+#teamdiv{
+	margin-top:70px;
 }

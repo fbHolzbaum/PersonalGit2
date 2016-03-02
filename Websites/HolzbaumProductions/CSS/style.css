@@ -337,17 +337,20 @@ footer{
 	margin:auto;
 	width:100%;
 	min-height:850px;
+	height:auto;
 	max-width:1900px;
 	background-color:rgba(220, 220, 220, 0.5);
+	display:inline-block;
 }
 
 .teammember{
 	float:left;
-	height:800px;
+	height:auto;
 	width:33%;
 	margin:auto;
 	background-color:rgba(220, 220, 220, 0);
 	padding-bottom:50px;
+	
 }
 
 .memberfoto{
@@ -367,8 +370,7 @@ footer{
 #membertext{
 	width:400px;
 	display:block;
-	height:300px;
-	max-height:400px;
+	height:auto;
 	margin:auto;
 }
 
@@ -391,7 +393,7 @@ footer{
 
 
 #membertext p{
-	margin-top:40px;
+	margin-top:30px;
 	font-size:20px;
 	display:block;
 }

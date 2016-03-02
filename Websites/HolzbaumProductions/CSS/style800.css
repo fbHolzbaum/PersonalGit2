@@ -281,6 +281,35 @@ footer{
 }
 
 
+/* Here begins the about css
+//////////////////////////
+//////////////////////////
+/////////////////////////*/
+
+#membertext{
+	height:auto;
+}
+
+
+#membertext h2{
+	margin-top:30px;
+	margin-bottom:5px;
+	font-size:22px;
+	
+}
+
+#membertext h3{
+	margin-top:5px;
+	font-size:18px;
+	color:rgb(30, 96, 97);
+}
+
+
+#membertext p{
+	margin-top:22px;
+	font-size:18px;
+	display:block;
+}
 
 /* Here begins the games css
 //////////////////////////

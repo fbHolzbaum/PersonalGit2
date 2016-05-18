@@ -179,8 +179,8 @@
 					<p>Roman is the creativity pool of the team. With his out of the border thinking, he enriches the design and scope of Holzbaum Productions applications.
 The love for his favourite Ice Tea (Migros Original) is only topped by the love for his lovely girlfriend 
 and his dream to make a living based on future success with Holzbaum Productions.
-He went so far to retreat from a promising field hockey career in order to find time to 
-invest into the company and get his IT skills on a higher level.
+He went so far as to retreat from a promising field hockey career in order to find time to 
+invest into the company and get his IT skills to a higher level.
 He's a very cheerful guy and almost always has a smile to share with everyone.
 </p>
 				</div>
@@ -193,8 +193,8 @@ He's a very cheerful guy and almost always has a smile to share with everyone.
 				<div id="membertext">
 					<h2>Felipe Blanco</h2>
 					<h3>Tanktop Master</h3>
-					<p>Felipe is the heart and soul of Holzbaum Productions. As most experienced developer he guides the team through the different design stages, and works himself passionately on every project.
-The only time, he lays down his work is when the Spanish national football team is playing one of their matches.  But with the vision of running an own app developing company in mind, he is the strongest driving force behind Holzbaum Productions.
+					<p>Felipe is the heart and soul of Holzbaum Productions. As most experienced developer he guides the team through the different design stages, and works passionately on every project.
+The only time he lays down his work is when the Spanish national football team is playing one of their matches.  But with the vision of running his own app developing company, he is the strongest driving force behind Holzbaum Productions.
 As a skilled tennis player he scares his opponents not only with his magic strikes but also with his unpredictable gameplay. 
 You have to get to know him, because he is a straight, lovely and interesting guy with multiple talents and great looks.
 </p>
@@ -209,7 +209,7 @@ You have to get to know him, because he is a straight, lovely and interesting gu
 					<h2>Micha Brunner</h2>
 					<h3>Powerdice</h3>
 					<p>Micha is the genius brain of our team. With his master's degree of science he develops many algorithms to improve the Holzbaum Productions applications. 
-As an engineer he shares a great admiration for Tesla Motors with his neighbourhood. With Holzbaum Productions he aims to not only get enough money to live, but also have enough to buy a Tesla in the future. 
+As an engineer he shares a great admiration for Tesla Motors with his friends. With Holzbaum Productions he aims to not only get enough money to live, but also have enough to buy a Tesla in the future. 
 In Football, Tennis and Badminton he finds his balance to the challenging tasks of the daily working business.
 He is not the most connecting to strangers, but when you get to know him, you discover a warm-hearted, humorous and authentic guy.
 </p>

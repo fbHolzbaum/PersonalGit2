@@ -176,11 +176,12 @@
 				<div id="membertext">
 					<h2>Roman Martinello</h2>
 					<h3>Orange Whale</h3>
-					<p>Roman is the creativity pool of the team. With his out of the box thinking, he enriches the design and scope of Holzbaum Productions applications.
-The love for his favourite Ice Tea (Migros Original) is only surpassed by the love for his lovely girlfriend 
-and his dream to make a living based on the future success of Holzbaum Productions.
-He's a very cheerful guy and always shares a smile with everyone.
-</p>
+					<p>
+					Roman is the creativity pool of the team. With his out of the box thinking, he enriches the design and scope of Holzbaum Productions applications.
+					The love for his favourite Ice Tea (Migros Original) is only surpassed by the love for his lovely girlfriend 
+					and his dream to make a living based on the future success of Holzbaum Productions.
+					He's a very cheerful guy and always shares a smile with everyone.
+					</p>
 				</div>
 			</div>
 			
@@ -191,10 +192,11 @@ He's a very cheerful guy and always shares a smile with everyone.
 				<div id="membertext">
 					<h2>Felipe Blanco</h2>
 					<h3>Tanktop Master</h3>
-					<p>Felipe is the heart and soul of Holzbaum Productions. As most experienced developer he guides the team through the different design stages, and works passionately on every project.
-The only time he lays down his work is when the Spanish national football team is playing one of their matches.  But with the vision of running his own app developing company, he is the strongest driving force behind Holzbaum Productions.
-You have to get to know him, because he is a straight, lovely and interesting guy with multiple talents and great looks.
-</p>
+					<p>
+					Felipe is the heart and soul of Holzbaum Productions. As most experienced developer he guides the team through the different design stages, and works passionately on every project.
+					With the vision of running his own app development company, he is the strongest driving force behind Holzbaum Productions.
+					You have to get to know him, because he is a straight, lovely and interesting guy with multiple talents and great looks.
+					</p>
 				</div>
 			</div>
 			
@@ -205,11 +207,12 @@ You have to get to know him, because he is a straight, lovely and interesting gu
 				<div id="membertext">
 					<h2>Micha Brunner</h2>
 					<h3>Powerdice</h3>
-					<p>Micha is the genius brain of the team. With his master's degree in science he develops many algorithms to improve the Holzbaum Productions applications. 
-As an engineer he shares a great admiration for Tesla Motors with his friends. With Holzbaum Productions he aims to not only get enough money to live, but also have enough to buy a Tesla in the future. 
-In Football, Tennis and Badminton he finds his balance to the challenging tasks of the daily working business.
-He is not the most connecting to strangers, but when you get to know him, you discover a warm-hearted, humorous and authentic guy.
-</p>
+					<p>
+					Micha is the genius brain of the team. With his master's degree in science he develops many algorithms to improve the Holzbaum Productions applications. 
+					As an engineer he shares a great admiration for Tesla Motors with his friends.
+					In Football, Tennis and Badminton he finds his balance to the challenging tasks of the daily working business.
+					He might seem a bit reserverd when your first meet him, but when you get to know him, you discover a warm-hearted, humorous and authentic guy.
+					</p>
 				</div>
 			</div>
 		</div>

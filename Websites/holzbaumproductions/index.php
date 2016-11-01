@@ -13,6 +13,23 @@
 		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)">
 		<link rel="stylesheet" href="css/style400.css" media="screen and (max-width: 400px)"> 
 		
+		<!-- PHP Head Part -->
+		<?php
+			error_reporting(-1); // display all faires
+	ini_set('display_errors', 1);  // ensure that faires will be seen
+	ini_set('display_startup_errors', 1); // display faires that didn't born
+		
+			include('db/connect.php');
+			try
+			{
+				ConnectDB('read-user', '', '');
+			}
+			catch (Exception $e)
+			{
+				echo "Can't connect to DB.";
+			}
+		?>
+		
 		<!-- Javascript Part -->
 		<script>
 		//<!--		
@@ -170,18 +187,18 @@
 		<div id="mainsection">
 			<h1 id="newstitel">Holzbaum News</h1>
 			<div id="news">
-				<div id="newscontainer">
-					<h3>New Game</h3> <p id="newsdate">31.10.2016</p>
-					<p>Pre-production of our upcoming game is going well. More infos in Q1 2017.</p>
-				</div>
-				<div id="newscontainer">
-					<h3>New levels planned</h3> <p id="newsdate">13.04.2016</p>
-					<p>The new levels for Squared will be coming out soon. Stay tuned.</p>
-				</div>
-				<div id="newscontainer"> 
-					<h3>Our website is live</h3> <p id="newsdate">12.01.2016</p>
-					<p>The new website finally launched. Visit us here for all the news.</p>
-				</div>
+				<?php
+					$sql = "SELECT * FROM web_news ORDER BY newsdate DESC LIMIT 4";
+					$result = $conn->query($sql);
+					
+					while($row = $result->fetch_assoc()) 
+					{
+						echo "<div id='newscontainer'>";
+						echo "<h3>". $row["title"] ."</h3> <p id='newsdate'>". $row["newsdate"] ."</p>";
+						echo "<p>". $row["content"] ."</p>";
+						echo "</div>";
+					}
+				?>
 			</div>
 			<div id="twitterwindow">
 				<div>

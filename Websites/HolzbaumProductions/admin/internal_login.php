@@ -15,6 +15,9 @@
 		
 		<!-- PHP Head Part -->
 		<?php
+			include('db/connect.php');
+			include('/etc/web/dbinf.php');
+		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
 				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed

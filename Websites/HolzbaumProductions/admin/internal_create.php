@@ -18,8 +18,7 @@
 			error_reporting(-1); // display all faires
 			ini_set('display_errors', 1);  // ensure that faires will be seen
 			ini_set('display_startup_errors', 1); // display faires that didn't born
-		
-			include('../db/connect.php');
+			include('../db/user.php');
 			include('../db/password.php');
 		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
@@ -38,15 +37,21 @@
 				$pw2 = $_POST["formadminpw"];
 				$db = $_POST["formdb"];
 				$table = $_POST["formtable"];
-				
-				ConnectDB($admin, $pw2, $db);
-				
-				$salt = GenerateSalt();
-				echo $salt;
-				$hash = GenerateHash($pw, $salt);
-				echo $hash;
-				
-				$GLOBALS["notification"] = "Login failed??.";
+								
+				$value = CheckUserExists($user);
+				if($value > 0)
+				{
+					$GLOBALS["notification"] = "User already exists.";
+				}
+				else
+				{				
+					$salt = GenerateSalt();
+					$hash = GenerateHash($pw, $salt);
+					
+					CreateUser($conn_internal, $user, $hash, $salt, 2);
+					
+					$GLOBALS["notification"] = "Login failed??.";
+				}
 			}
 		?>
 	</head>
@@ -58,7 +63,7 @@
 	
 	<body id="body" style="background-color:white">
 		
-		<form action="internal_login.php" method="POST"> <!-- This form calls the php function SendMail -->
+		<form action="internal_create.php" method="POST"> <!-- This form calls the php function SendMail -->
 			<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
 			<p> <label for="formpassword">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
 			<p> <label for="formadmin">ADMIN: </label> </p> <input type="text"  required name="formadmin" id="formadmin" />
@@ -66,7 +71,7 @@
 			<p> <label for="formdb">DB: </label> </p> <input type="text"  required name="formdb" id="formdb" />
 			<p> <label for="formtable">TABLE: </label> </p> <input type="text"  required name="formtable" id="formtable" />
 			
-			<p> <input type="submit" id="formsubmit" name="formsubmit" value="Sign In"> </p>
+			<p> <input type="submit" id="formsubmit" name="formsubmit" value="Create"> </p>
 		</form>	
 		
 		<?php if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}?>

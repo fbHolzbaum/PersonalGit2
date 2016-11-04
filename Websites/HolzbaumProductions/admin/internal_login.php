@@ -15,7 +15,12 @@
 		
 		<!-- PHP Head Part -->
 		<?php
-			include('db/connect.php');
+			error_reporting(-1); // display all faires
+			ini_set('display_errors', 1);  // ensure that faires will be seen
+			ini_set('display_startup_errors', 1); // display faires that didn't born
+		
+			include('../db/connect.php');
+			include('../db/password.php');
 			include('/etc/web/dbinf.php');
 		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
@@ -30,7 +35,11 @@
 			{
 				$user = $_POST["formuser"];
 				$pw = $_POST["formpw"];
-
+				
+				$salt = GenerateSalt();
+				echo $salt;
+				$hash = GenerateHash($pw, $salt);
+				echo $hash;
 				
 				$GLOBALS["notification"] = "Login failed??.";
 			}

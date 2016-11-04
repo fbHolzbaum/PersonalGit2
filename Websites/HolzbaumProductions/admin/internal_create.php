@@ -18,8 +18,9 @@
 			error_reporting(-1); // display all faires
 			ini_set('display_errors', 1);  // ensure that faires will be seen
 			ini_set('display_startup_errors', 1); // display faires that didn't born
-			include('../db/user.php');
 			include('../db/password.php');
+			include('/etc/web/dbinf.php');
+			include('../db/connect.php');
 		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
@@ -31,14 +32,22 @@
 			
 			function CreateInternal()
 			{
-				$user = $_POST["formuser"];
-				$pw = $_POST["formpw"];
-				$admin = $_POST["formadmin"];
-				$pw2 = $_POST["formadminpw"];
-				$db = $_POST["formdb"];
-				$table = $_POST["formtable"];
+				$f_user = $_POST["formuser"];
+				$f_pw = $_POST["formpw"];
+				$f_admin = $_POST["formadmin"];
+				$f_pw2 = $_POST["formadminpw"];
+				$f_db = $_POST["formdb"];
+				$f_table = $_POST["formtable"];
 								
-				$value = CheckUserExists($user);
+				if(ISSET($GLOBALS['global_conn']))
+				{
+					mysqli_close($GLOBALS['global_conn']);
+				}
+				ConnectDB($f_admin, $f_pw2, $f_db);
+				
+				include('../db/user.php');
+								
+				$value = CheckUserExists($f_user);
 				if($value > 0)
 				{
 					$GLOBALS["notification"] = "User already exists.";
@@ -46,12 +55,14 @@
 				else
 				{				
 					$salt = GenerateSalt();
-					$hash = GenerateHash($pw, $salt);
+					$hash = GenerateHash($f_pw, $f_salt);
 					
-					CreateUser($conn_internal, $user, $hash, $salt, 2);
+					CreateUser($f_user, $hash, $salt, 2);
 					
 					$GLOBALS["notification"] = "Login failed??.";
 				}
+				
+				mysqli_close($GLOBALS['global_conn']);
 			}
 		?>
 	</head>

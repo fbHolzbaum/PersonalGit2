@@ -21,6 +21,7 @@
 			include('../db/password.php');
 			include('/etc/web/dbinf.php');
 			include('../db/connect.php');
+			include('../db/user.php');
 		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
@@ -44,10 +45,8 @@
 					mysqli_close($GLOBALS['global_conn']);
 				}
 				ConnectDB($f_admin, $f_pw2, $f_db);
-				
-				include('../db/user.php');
-								
-				$value = CheckUserExists($f_user);
+						
+				$value = CheckUser($f_user);
 				if($value > 0)
 				{
 					$GLOBALS["notification"] = "User already exists.";
@@ -55,11 +54,11 @@
 				else
 				{				
 					$salt = GenerateSalt();
-					$hash = GenerateHash($f_pw, $f_salt);
+					$hash = GenerateHash($f_pw, $salt);
 					
 					CreateUser($f_user, $hash, $salt, 2);
 					
-					$GLOBALS["notification"] = "Login failed??.";
+					$GLOBALS["notification"] = "User created.";
 				}
 				
 				mysqli_close($GLOBALS['global_conn']);

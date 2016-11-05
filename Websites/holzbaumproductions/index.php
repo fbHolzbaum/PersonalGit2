@@ -189,7 +189,7 @@
 			<div id="news">
 				<?php
 					$sql = "SELECT * FROM web_news ORDER BY newsdate DESC LIMIT 4";
-					$result = $conn->query($sql);
+					$result = $global_conn->query($sql);
 					
 					while($row = $result->fetch_assoc()) 
 					{
@@ -198,6 +198,8 @@
 						echo "<p>". $row["content"] ."</p>";
 						echo "</div>";
 					}
+					
+					mysqli_close($global_conn);
 				?>
 			</div>
 			<div id="twitterwindow">

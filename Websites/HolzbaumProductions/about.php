@@ -187,7 +187,7 @@
 			
 			<div class="teammember" id="member2">
 				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
+					<img src="images/team/felipe.jpg">
 				</div>
 				<div id="membertext">
 					<h2>Felipe Blanco</h2>

@@ -106,10 +106,10 @@
 	<body id="body" style="background-color:white">
 		<div id="navigationbar">
 			<div id="logo">
-				<a href="index.html"><img src="images/main/hplogo.jpg"></a>
+				<a href="index.php"><img src="images/main/hplogo.jpg"></a>
 			</div>
 			<div id="logomobile">
-				<a href="index.html"><img src="images/main/hplogo_mobile.jpg"></a>
+				<a href="index.php"><img src="images/main/hplogo_mobile.jpg"></a>
 			</div>
 			<div class="navigationsection" id="firstsection">
 				<a href="about.php">ABOUT</a>
@@ -118,7 +118,7 @@
 				<a href="games.html">GAMES</a>
 			</div>
 			<div class="navigationsection">
-				<a href="index.html#newstitel">NEWS</a>
+				<a href="index.php#newstitel">NEWS</a>
 			</div>
 			<!-- ONly for mobile -->
 			<div id="mobilenavigationbutton"  onclick="CallNavigation()">
@@ -128,13 +128,13 @@
 		<!-- ONly for mobile -->
 		<div id="mobilenavigationOff">
 			<div style="margin-top:10px">
-				<a href="index.html" onclick="CallNavigation()">HOME</a>
+				<a href="index.php" onclick="CallNavigation()">HOME</a>
 			</div>
 			<div id="navigation1">
-				<a href="index.html#mainsection" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
+				<a href="index.php#mainsection" onclick="CallNavigation()">NEWS</a><p onclick="CallSubNavigation(1)" id="arrow1">&#x25BC;</p>
 				<div id="lowernavigation1" class="hidden">
-					<a href="index.html#mainsection" onclick="CallNavigation()">Website</a>
-					<a href="index.html#twitterwindow" onclick="CallNavigation()">Twitter</a>
+					<a href="index.php#mainsection" onclick="CallNavigation()">Website</a>
+					<a href="index.php#twitterwindow" onclick="CallNavigation()">Twitter</a>
 				</div>
 			</div>
 			<div id="navigation2">
@@ -215,13 +215,13 @@
 		
 		<div id="footercontainer">
 			<div class="footerlink" id="firstfooterlink">
-				<a href="index.html" style="font-weight:bold;">HOME</a>
+				<a href="index.php" style="font-weight:bold;">HOME</a>
 			</div>
 			
 			<div class="footerlink">
-				<a href="index.html#mainsection" style="font-weight:bold;">NEWS</a><br>
-				<a href="index.html#mainsection">Website News</a><br>
-				<a href="index.html#twitterwindow">Twitter News</a>
+				<a href="index.php#mainsection" style="font-weight:bold;">NEWS</a><br>
+				<a href="index.php#mainsection">Website News</a><br>
+				<a href="index.php#twitterwindow">Twitter News</a>
 			</div>
 			
 			<div class="footerlink">

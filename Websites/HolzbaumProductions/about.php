@@ -171,7 +171,7 @@
 		<div id="teamdiv" >
 			<div class="teammember" >
 				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
+					<img src="images/team/roman.jpg">
 				</div>
 				<div id="membertext">
 					<h2>Roman Martinello</h2>
@@ -202,7 +202,7 @@
 			
 			<div class="teammember" id="member3">
 				<div class="memberfoto">
-					<img src="images/team/foto.jpg">
+					<img src="images/team/micha.jpg">
 				</div>
 				<div id="membertext">
 					<h2>Micha Brunner</h2>

@@ -19,29 +19,56 @@
 			ini_set('display_errors', 1);  // ensure that faires will be seen
 			ini_set('display_startup_errors', 1); // display faires that didn't born
 		
-			include('../db/connect.php');
 			include('../db/password.php');
 			include('/etc/web/dbinf.php');
+			include('../db/connect.php');
+			include('../db/user.php');
 		
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
 				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed
-					
 					LogIn();
 				}
 			}
 			
 			function LogIn()
 			{
-				$user = $_POST["formuser"];
-				$pw = $_POST["formpw"];
+				$f_user = $_POST["formuser"];
+				$f_pw = $_POST["formpw"];
 				
-				$salt = GenerateSalt();
-				echo $salt;
-				$hash = GenerateHash($pw, $salt);
-				echo $hash;
+				if(ISSET($GLOBALS['global_conn']))
+				{
+					mysqli_close($GLOBALS['global_conn']);
+				}
+				ConnectDB($GLOBALS['userRead'], $GLOBALS['pwRead'], $GLOBALS['db_web']);
 				
-				$GLOBALS["notification"] = "Login failed??.";
+				$value = CheckUser($f_user);
+				if($value > 0)
+				{
+					$salt = GetSalt($f_user);
+					$hash = GenerateHash($f_pw, $salt);
+					$passwordCheck = CheckUserAndPassword($f_user, $hash);
+					if($passwordCheck > 0)
+					{
+						try
+						{
+							LogIn();
+						}
+						catch
+						{
+							$GLOBALS["notification"] = "Could not log in user.";
+						}
+					}
+					else
+					{
+						$GLOBALS["notification"] = "User or Password wrong.";
+					}
+				}
+				else
+				{				
+					$GLOBALS["notification"] = "User or Password wrong.";
+				}
+				
 			}
 		?>
 	</head>
@@ -52,12 +79,26 @@
 	</header>
 	
 	<body id="body" style="background-color:white">
-		
-		<form action="internal_login.php" method="POST"> <!-- This form calls the php function SendMail -->
-			<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
-			<p> <label for="formemail">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
-			<p> <input type="submit" id="formsubmit" name="formsubmit" value="Sign In"> </p>
-		</form>	
+		<?php 
+		if(!ISSET($_SESSION['user']))
+		{
+			echo('
+				<form action="internal_login.php" method="POST"> 
+					<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
+					<p> <label for="formpw">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
+					<p> <input type="submit" id="formsubmit" name="formsubmit" value="SignIn"> </p>
+				</form>
+			');
+		}
+		else
+		{
+			echo('
+				<form action="internal_login.php" method="POST">
+					<p> <input type="submit" id="formsubmit" name="formsubmit" value="SignOut"> </p>
+				</form>
+			');
+		}
+		?>
 		
 		<?php if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}?>
 		

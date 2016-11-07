@@ -19,7 +19,7 @@
 	
 	function CheckUser($user)
 	{
-		$query = 'SELECT user FROM web_user WHERE user = ?';
+		$query = 'SELECT COUNT(user) FROM web_user WHERE user = ?';
 		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
 		mysqli_stmt_prepare($stmt, $query);
 		mysqli_stmt_bind_param($stmt, 's', $user);
@@ -27,8 +27,53 @@
 		
 		mysqli_stmt_bind_result($stmt, $result);
 		mysqli_stmt_fetch($stmt);
-		return mysqli_num_rows($resul);
+		return $result;
 	}
 	
+	//Returns the salt of a user
+	function GetSalt($user)
+	{
+		$query = 'SELECT salt FROM web_user WHERE user = ?';
+		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
+		mysqli_stmt_prepare($stmt, $query);
+		mysqli_stmt_bind_param($stmt, 's', $user);
+		mysqli_stmt_execute($stmt);
+		
+		mysqli_stmt_bind_result($stmt, $result);
+		mysqli_stmt_fetch($stmt);
+		
+		return $result;
+	}
+	
+	function CheckUserAndPassword($user, $pw)
+	{
+		$query = 'SELECT COUNT(user) FROM web_user WHERE user = ? AND password = ?';
+		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
+		mysqli_stmt_prepare($stmt, $query);
+		mysqli_stmt_bind_param($stmt, 'ss', $user, $pw);
+		mysqli_stmt_execute($stmt);
+		
+		mysqli_stmt_bind_result($stmt, $result);
+		mysqli_stmt_fetch($stmt);
+		
+		return $result;
+	}
+	
+	function LogIn($user)
+	{
+		$query = 'SELECT web_roles.role FROM web_roles
+					INNER JOIN web_user
+					ON web_roles.id=web_user.role_id
+					WHERE web_user.user=?';
+		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
+		mysqli_stmt_prepare($stmt, $query);
+		mysqli_stmt_bind_param($stmt, 's', $user);
+		mysqli_stmt_execute($stmt);
+		mysqli_stmt_bind_result($stmt, $result);
+		mysqli_stmt_fetch($stmt);
+		
+		$_SESSION["user"] = $user;
+		$_SESSION["role"] = $result;
+	}
 	
 ?>

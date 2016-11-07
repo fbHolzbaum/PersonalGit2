@@ -1,5 +1,4 @@
 <?php
-
 	error_reporting(-1); // display all faires
 	ini_set('display_errors', 1);  // ensure that faires will be seen
 	ini_set('display_startup_errors', 1); // display faires that didn't born
@@ -61,10 +60,7 @@
 	
 	function LogInSession($user)
 	{
-		$query = 'SELECT web_roles.role FROM web_roles
-					INNER JOIN web_user
-					ON web_roles.id=web_user.role_id
-					WHERE web_user.user=?';
+		$query = ('SELECT web_roles.role FROM web_roles INNER JOIN web_user ON web_roles.id=web_user.role_id WHERE web_user.user=?');
 		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
 		mysqli_stmt_prepare($stmt, $query);
 		mysqli_stmt_bind_param($stmt, 's', $user);
@@ -76,4 +72,12 @@
 		$_SESSION["role"] = $result;
 	}
 	
+	function DestroySession()
+	{
+		// remove all session variables
+		session_unset(); 
+
+		// destroy the session 
+		session_destroy(); 
+	}
 ?>

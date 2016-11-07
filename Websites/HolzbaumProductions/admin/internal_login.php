@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/style.css">
@@ -15,9 +19,9 @@
 		
 		<!-- PHP Head Part -->
 		<?php
-			error_reporting(-1); // display all faires
+			/*error_reporting(-1); // display all faires
 			ini_set('display_errors', 1);  // ensure that faires will be seen
-			ini_set('display_startup_errors', 1); // display faires that didn't born
+			ini_set('display_startup_errors', 1); // display faires that didn't born*/
 		
 			include('../db/password.php');
 			include('/etc/web/dbinf.php');
@@ -27,7 +31,14 @@
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
 				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed
-					LogIn();
+					if(!ISSET($_SESSION) || $_SESSION['user'] == NULL || $_SESSION['user'] == '')
+					{
+						LogIn();
+					}
+					else
+					{
+						LogOff();
+					}
 				}
 			}
 			
@@ -69,6 +80,12 @@
 					$GLOBALS["notification"] = "User or Password wrong.";
 				}
 				
+				mysqli_close($GLOBALS['global_conn']);
+			}
+			
+			function LogOff()
+			{
+				DestroySession();
 			}
 		?>
 	</head>
@@ -80,10 +97,10 @@
 	
 	<body id="body" style="background-color:white">
 		<?php 
-		
+		/*
 		error_reporting(-1); // display all faires
 			ini_set('display_errors', 1);  // ensure that faires will be seen
-			ini_set('display_startup_errors', 1); // display faires that didn't born
+			ini_set('display_startup_errors', 1); // display faires that didn't born*/
 		
 
 		if(!ISSET($_SESSION['user']))
@@ -92,7 +109,7 @@
 				<form action='internal_login.php' method='POST'> 
 					<p> <label for='formname'>USER: </label> </p> <input type='text' required name='formuser' id='formuser' />
 					<p> <label for='formpw'>PASSWORD: </label> </p> <input type='password'  required name='formpw' id='formpw' />
-					<p> <input type='submit' id='formsubmit' name='formsubmit' value='SignIn'> </p>
+					<p> <input type='submit' id='formsubmit' name='formsubmit' value='Sign In'> </p>
 				</form>
 			");
 		}
@@ -100,7 +117,7 @@
 		{
 			echo("
 				<form action='internal_login.php' method='POST'>
-					<p> <input type='submit' id='formsubmit' name='formsubmit' value='SignOut'> </p>
+					<p> <input type='submit' id='formsubmit' name='formsubmit' value='Sign Out'> </p>
 				</form>
 			");
 		}

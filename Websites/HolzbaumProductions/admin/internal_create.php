@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/style.css">
@@ -72,19 +76,31 @@
 	</header>
 	
 	<body id="body" style="background-color:white">
-		
-		<form action="internal_create.php" method="POST"> <!-- This form calls the php function SendMail -->
-			<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
-			<p> <label for="formpassword">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
-			<p> <label for="formadmin">ADMIN: </label> </p> <input type="text"  required name="formadmin" id="formadmin" />
-			<p> <label for="formadminpassword">PASSWORD: </label> </p> <input type="password"  required name="formadminpw" id="formadminpw" />
-			<p> <label for="formdb">DB: </label> </p> <input type="text"  required name="formdb" id="formdb" />
-			<p> <label for="formtable">TABLE: </label> </p> <input type="text"  required name="formtable" id="formtable" />
+		<?php
+		echo $_SESSION['user'];
+		echo $_SESSION['role'];
+		if(ISSET($_SESSION['user']) && $_SESSION['role'] == 'ADMIN')
+		{
+			echo(')
+				<form action="internal_create.php" method="POST"> <!-- This form calls the php function SendMail -->
+					<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
+					<p> <label for="formpassword">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
+					<p> <label for="formadmin">ADMIN: </label> </p> <input type="text"  required name="formadmin" id="formadmin" />
+					<p> <label for="formadminpassword">PASSWORD: </label> </p> <input type="password"  required name="formadminpw" id="formadminpw" />
+					<p> <label for="formdb">DB: </label> </p> <input type="text"  required name="formdb" id="formdb" />
+					<p> <label for="formtable">TABLE: </label> </p> <input type="text"  required name="formtable" id="formtable" />
+					
+					<p> <input type="submit" id="formsubmit" name="formsubmit" value="Create"> </p>
+				</form>	
+			');
 			
-			<p> <input type="submit" id="formsubmit" name="formsubmit" value="Create"> </p>
-		</form>	
-		
-		<?php if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}?>
+			if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}
+		}
+		else
+		{
+			echo ("<p id='message'>You have no permission to create users.</p>");
+		}
+		?>
 		
 	</body>
 	

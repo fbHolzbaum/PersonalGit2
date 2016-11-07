@@ -20,9 +20,10 @@
 	ini_set('display_startup_errors', 1); // display faires that didn't born
 		
 			include('db/connect.php');
+			include('/etc/web/dbinf.php');
 			try
 			{
-				ConnectDB('read-user', '', '');
+				ConnectDB($GLOBALS['userRead'], $GLOBALS['pwRead'], $GLOBALS['db_web']);
 			}
 			catch (Exception $e)
 			{

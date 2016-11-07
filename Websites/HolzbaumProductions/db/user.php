@@ -59,7 +59,7 @@
 		return $result;
 	}
 	
-	function LogIn($user)
+	function LogInSession($user)
 	{
 		$query = 'SELECT web_roles.role FROM web_roles
 					INNER JOIN web_user

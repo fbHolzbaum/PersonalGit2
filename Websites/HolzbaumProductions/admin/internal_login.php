@@ -52,9 +52,9 @@
 					{
 						try
 						{
-							LogIn();
+							LogInSession($f_user);
 						}
-						catch
+						catch (Exception $e)
 						{
 							$GLOBALS["notification"] = "Could not log in user.";
 						}
@@ -80,27 +80,34 @@
 	
 	<body id="body" style="background-color:white">
 		<?php 
+		
+		error_reporting(-1); // display all faires
+			ini_set('display_errors', 1);  // ensure that faires will be seen
+			ini_set('display_startup_errors', 1); // display faires that didn't born
+		
+
 		if(!ISSET($_SESSION['user']))
 		{
-			echo('
-				<form action="internal_login.php" method="POST"> 
-					<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
-					<p> <label for="formpw">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />
-					<p> <input type="submit" id="formsubmit" name="formsubmit" value="SignIn"> </p>
+			echo("
+				<form action='internal_login.php' method='POST'> 
+					<p> <label for='formname'>USER: </label> </p> <input type='text' required name='formuser' id='formuser' />
+					<p> <label for='formpw'>PASSWORD: </label> </p> <input type='password'  required name='formpw' id='formpw' />
+					<p> <input type='submit' id='formsubmit' name='formsubmit' value='SignIn'> </p>
 				</form>
-			');
+			");
 		}
 		else
 		{
-			echo('
-				<form action="internal_login.php" method="POST">
-					<p> <input type="submit" id="formsubmit" name="formsubmit" value="SignOut"> </p>
+			echo("
+				<form action='internal_login.php' method='POST'>
+					<p> <input type='submit' id='formsubmit' name='formsubmit' value='SignOut'> </p>
 				</form>
-			');
+			");
 		}
-		?>
 		
-		<?php if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}?>
+		if(ISSET($GLOBALS["notification"])){echo ("<p id='message'>".$GLOBALS['notification']."</p>");}
+		
+		?>
 		
 	</body>
 	

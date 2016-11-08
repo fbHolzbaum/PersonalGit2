@@ -205,6 +205,17 @@ session_start();
 					}
 					
 					mysqli_close($global_conn);
+					
+					if(ISSET($_SESSION['user']) && $_SESSION['role'] == 'ADMIN')
+					{
+						echo "<div id='newscontainer'>";
+							echo '<form action="index.php" method="POST">';
+								echo '<p>Subject: <input type="text" required name="formsubject" id="formsubject" /></p>';
+								echo '<p>Content: <input type="text" required name="formcontent" id="formcontent" /></p>';
+								echo '<p> <input type="submit" id="submit" name="submit" value="Add news"> </p>';
+							echo '</form>';
+						echo "</div>";
+					}
 				?>
 			</div>
 			<div id="twitterwindow">

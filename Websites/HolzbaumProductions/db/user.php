@@ -63,7 +63,9 @@
 		$query = ('SELECT web_roles.role FROM web_roles INNER JOIN web_user ON web_roles.id=web_user.role_id WHERE web_user.user=?');
 		$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
 		mysqli_stmt_prepare($stmt, $query);
+		echo $stmt->error;
 		mysqli_stmt_bind_param($stmt, 's', $user);
+		echo $stmt->error;
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_bind_result($stmt, $result);
 		mysqli_stmt_fetch($stmt);

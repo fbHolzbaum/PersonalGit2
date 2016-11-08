@@ -31,7 +31,7 @@ session_start();
 			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
 			{
 				if(ISSET($_POST["formsubmit"])){ //If create submit button is pressed
-					if(!ISSET($_SESSION) || $_SESSION['user'] == NULL || $_SESSION['user'] == '')
+					if(!ISSET($_SESSION['user']))
 					{
 						LogIn();
 					}

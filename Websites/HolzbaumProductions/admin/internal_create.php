@@ -77,11 +77,9 @@ session_start();
 	
 	<body id="body" style="background-color:white">
 		<?php
-		echo $_SESSION['user'];
-		echo $_SESSION['role'];
 		if(ISSET($_SESSION['user']) && $_SESSION['role'] == 'ADMIN')
 		{
-			echo(')
+			echo('
 				<form action="internal_create.php" method="POST"> <!-- This form calls the php function SendMail -->
 					<p> <label for="formname">USER: </label> </p> <input type="text" required name="formuser" id="formuser" />
 					<p> <label for="formpassword">PASSWORD: </label> </p> <input type="password"  required name="formpw" id="formpw" />

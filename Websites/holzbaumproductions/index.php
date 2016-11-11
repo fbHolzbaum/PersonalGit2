@@ -16,6 +16,7 @@ session_start();
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
 		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)">
 		<link rel="stylesheet" href="css/style400.css" media="screen and (max-width: 400px)"> 
+		<link rel="stylesheet" href="css/styleAdmin.css">
 		
 		<!-- PHP Head Part -->
 		<?php
@@ -32,6 +33,39 @@ session_start();
 			catch (Exception $e)
 			{
 				echo "Can't connect to DB.";
+			}
+			
+			if($_SERVER['REQUEST_METHOD']=='POST') //Checks if the submit button is clicked
+			{
+				if(ISSET($_POST["submit"])){ //If create submit button is pressed
+					
+					AddNews();
+				}
+			}
+			
+			function AddNews()
+			{
+				$f_subject = $_POST["formsubject"];
+				$f_content = $_POST["formcontent"];
+				
+				if(ISSET($GLOBALS['global_conn']))
+				{
+					mysqli_close($GLOBALS['global_conn']);
+				}
+				ConnectDB($GLOBALS['userWrite'], $GLOBALS['pwWrite'], $GLOBALS['db_web']);
+				
+				$query = 'INSERT INTO web_news (title, content, author, newsdate) VALUES (?, ?, ?, CURDATE())';
+				$stmt = mysqli_stmt_init($GLOBALS['global_conn']);
+				mysqli_stmt_prepare($stmt, $query);
+				mysqli_stmt_bind_param($stmt, "sss", $f_subject, $f_content, $_SESSION['user']);
+				if(!mysqli_stmt_execute($stmt))
+				{
+					echo "News couldn't be added.";
+				}
+				
+				mysqli_close($GLOBALS['global_conn']);
+				
+				header("Refresh:0");
 			}
 		?>
 		
@@ -208,8 +242,8 @@ session_start();
 					
 					if(ISSET($_SESSION['user']) && $_SESSION['role'] == 'ADMIN')
 					{
-						echo "<div id='newscontainer'>";
-							echo '<form action="index.php" method="POST">';
+						echo "<div id='adminnews'>";
+							echo '<form id="adminnewsform" action="index.php" method="POST">';
 								echo '<p>Subject: <input type="text" required name="formsubject" id="formsubject" /></p>';
 								echo '<p>Content: <input type="text" required name="formcontent" id="formcontent" /></p>';
 								echo '<p> <input type="submit" id="submit" name="submit" value="Add news"> </p>';

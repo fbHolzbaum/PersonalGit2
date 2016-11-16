@@ -11,7 +11,6 @@
 		<link rel="stylesheet" href="css/style800.css" media="screen and (max-width: 800px)">
 		<link rel="stylesheet" href="css/style550.css" media="screen and (max-width: 550px)">
 		<link rel="stylesheet" href="css/style400.css" media="screen and (max-width: 400px)"> 
-		
 		<!-- Javascript Part -->
 		<script>
 		//<!--		
@@ -143,33 +142,7 @@
 	</body>
 	
 	<footer>
-		<div id="footercontainer">
-			<div class="footerlink" id="firstfooterlink">
-				<a href="index.php" style="font-weight:bold;">HOME</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="index.php#mainsection" style="font-weight:bold;">NEWS</a><br>
-				<a href="index.php#mainsection">Website News</a><br>
-				<a href="index.php#twitterwindow">Twitter News</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="games.html" style="font-weight:bold;">GAMES</a><br>
-				<a href="squared.html">Squared</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="about.php" style="font-weight:bold;">ABOUT</a><br>
-				<a href="about.php#teamdiv">Team</a><br>
-				<a href="about.php#contactcontainer">Contact</a>
-			</div>
-			
-			<div id="socialmediacontainer">
-				<a href="https://www.facebook.com/HolzbaumProductions"><img src="images/main/fblogo_72.png"></a>
-				<a href="https://twitter.com/HolzbaumP"><img src="images/main/twitterlogo_white.png" style="background-color:rgb(85,172,238);"></a>
-			</div>
-		</div>
+		<?php include 'footer.html';?>
 	</footer>
 	
 </html>

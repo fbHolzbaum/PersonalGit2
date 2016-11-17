@@ -93,7 +93,7 @@
 				<a href="about.php">ABOUT</a>
 			</div>
 			<div class="navigationsection">
-				<a href="games.html">GAMES</a>
+				<a href="games.php">GAMES</a>
 			</div>
 			<div class="navigationsection">
 				<a href="index.php#newstitel">NEWS</a>
@@ -116,9 +116,9 @@
 				</div>
 			</div>
 			<div id="navigation2">
-				<a href="games.html">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
+				<a href="games.php">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
 				<div id="lowernavigation2" class="hidden">
-					<a href="squared.html">Squared</a>
+					<a href="squared.php">Squared</a>
 				</div>
 			</div>
 			<div id="navigation3">

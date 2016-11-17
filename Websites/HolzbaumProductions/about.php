@@ -124,7 +124,7 @@
 				<a href="about.php">ABOUT</a>
 			</div>
 			<div class="navigationsection">
-				<a href="games.html">GAMES</a>
+				<a href="games.php">GAMES</a>
 			</div>
 			<div class="navigationsection">
 				<a href="index.php#newstitel">NEWS</a>
@@ -147,9 +147,9 @@
 				</div>
 			</div>
 			<div id="navigation2">
-				<a href="games.html">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
+				<a href="games.php">GAMES</a><p onclick="CallSubNavigation(2)" id="arrow2">&#x25BC;</p>
 				<div id="lowernavigation2" class="hidden">
-					<a href="squared.html">Squared</a>
+					<a href="squared.php">Squared</a>
 				</div>
 			</div>
 			<div id="navigation3">
@@ -235,35 +235,6 @@
 		</div>
 	</body>
 	<footer>
-		
-		<div id="footercontainer">
-			<div class="footerlink" id="firstfooterlink">
-				<a href="index.php" style="font-weight:bold;">HOME</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="index.php#mainsection" style="font-weight:bold;">NEWS</a><br>
-				<a href="index.php#mainsection">Website News</a><br>
-				<a href="index.php#twitterwindow">Twitter News</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="games.html" style="font-weight:bold;">GAMES</a><br>
-				<a href="squared.html">Squared</a>
-			</div>
-			
-			<div class="footerlink">
-				<a href="about.php" style="font-weight:bold;">ABOUT</a><br>
-				<a href="about.php#teamdiv">Team</a><br>
-				<a href="about.php#contactcontainer">Contact</a>
-			</div>
-			
-			<div id="socialmediacontainer">
-				<a href="https://www.facebook.com/HolzbaumProductions"><img src="images/main/fblogo_72.png"></a>
-				<a href="https://twitter.com/HolzbaumP"><img src="images/main/twitterlogo_white.png" style="background-color:rgb(85,172,238);"></a>
-			</div>
-		</div>
-		
+		<?php include 'footer.html';?>
 	</footer>
-	
 </html>
